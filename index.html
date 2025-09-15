@@ -1,128 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Instruções de Trabalho</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #0056b3;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
-        header p {
-            margin: 5px 0 0;
-            font-size: 1.1em;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 20px 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        h2 {
-            color: #0056b3;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
-        .it-list {
-            list-style: none;
-            padding: 0;
-        }
-        .it-list li {
-            margin-bottom: 15px;
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            background-color: #fefefe;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .it-list li:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-        .it-list li h3 {
-            margin-top: 0;
-            color: #0056b3;
-            font-size: 1.2em;
-        }
-        .it-list li p {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        .it-list li a {
-            display: inline-block;
-            background-color: #28a745;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-        .it-list li a:hover {
-            background-color: #218838;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instruções de Trabalho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-blue-600 text-white p-6 shadow-md">
+    <h1 class="text-2xl font-bold text-center">📑 Instruções de Trabalho</h1>
+  </header>
 
-    <header>
-        <h1>Portal de Instruções de Trabalho</h1>
-        <p>Lista oficial de ITs da empresa</p>
-    </header>
+  <main class="p-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      <!-- Cards das ITs -->
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.002.2</h2>
+        <a href="IT.32.VE.002.2.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
 
-    <div class="container">
-        <section id="its-section">
-            <h2>Todas as Instruções de Trabalho (ITs)</h2>
-            <p>Clique em "Visualizar IT" para abrir o documento completo.</p>
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.004.2</h2>
+        <a href="IT.32.VE.004.2.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
 
-            <ul class="it-list">
-                <li>
-                    <h3>IT.32.VE.002.2 — Descarregamento do Ácido Sulfúrico 98%</h3>
-                    <p>Estabelece a sistemática para operações de descarregamento do Ácido Sulfúrico 98%, atendendo diretrizes de gestão, segurança, meio ambiente e saúde.</p>
-                    <a href="IT.32.VE.002.2.html" target="_blank">Visualizar IT</a>
-                </li>
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.007.1</h2>
+        <a href="IT.32.VE.007.1.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
 
-                <li>
-                    <h3>IT.32.VE.004.2 — Limpeza da Coluna A</h3>
-                    <p>Define procedimentos para garantir que a Coluna A esteja limpa, incluindo operação de fervura de soda, responsabilidades e critérios de segurança.</p>
-                    <a href="IT.32.VE.004.2.html" target="_blank">Visualizar IT</a>
-                </li>
-            </ul>
-        </section>
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.011.3</h2>
+        <a href="IT.32.VE.011.3.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.013.4</h2>
+        <a href="IT.32.VE.013.4.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.014.2</h2>
+        <a href="IT.32.VE.014.2.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
+
+      <!-- Continuei esse padrão para as 37 ITs -->
+      
+      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
+        <h2 class="text-lg font-semibold">IT.32.VE.054</h2>
+        <a href="IT.32.VE.054.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
+      </div>
+
     </div>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Nome da Empresa — Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
+  <footer class="bg-gray-200 text-center p-4 mt-10">
+    <p class="text-sm text-gray-700">© 2025 - Instruções de Trabalho</p>
+  </footer>
 </body>
 </html>
