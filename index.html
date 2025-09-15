@@ -1,62 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instruções de Trabalho</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruções de Trabalho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #0056b3;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 { margin: 0; }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        ul.it-list {
+            list-style: none;
+            padding: 0;
+        }
+        ul.it-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fefefe;
+        }
+        ul.it-list li h3 {
+            margin: 0 0 10px;
+            color: #0056b3;
+        }
+        ul.it-list li a {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        ul.it-list li a:hover { background: #218838; }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-  <header class="bg-blue-600 text-white p-6 shadow-md">
-    <h1 class="text-2xl font-bold text-center">📑 Instruções de Trabalho</h1>
-  </header>
+<body>
+    <header>
+        <h1>Portal de Instruções de Trabalho</h1>
+        <p>Lista completa de ITs disponíveis</p>
+    </header>
 
-  <main class="p-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      
-      <!-- Cards das ITs -->
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.002.2</h2>
-        <a href="IT.32.VE.002.2.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.004.2</h2>
-        <a href="IT.32.VE.004.2.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.007.1</h2>
-        <a href="IT.32.VE.007.1.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.011.3</h2>
-        <a href="IT.32.VE.011.3.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.013.4</h2>
-        <a href="IT.32.VE.013.4.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.014.2</h2>
-        <a href="IT.32.VE.014.2.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
-      <!-- Continuei esse padrão para as 37 ITs -->
-      
-      <div class="bg-white rounded-2xl shadow p-4 flex flex-col justify-between">
-        <h2 class="text-lg font-semibold">IT.32.VE.054</h2>
-        <a href="IT.32.VE.054.html" target="_blank" class="mt-3 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg">Visualizar</a>
-      </div>
-
+    <div class="container">
+        <h2>Instruções Disponíveis</h2>
+        <ul class="it-list">
+            <li><h3>IT.32.VE.002.2</h3><a href="IT.32.VE.002.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.004.2</h3><a href="IT.32.VE.004.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.007.1</h3><a href="IT.32.VE.007.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.011.3</h3><a href="IT.32.VE.011.3.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.013.4</h3><a href="IT.32.VE.013.4.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.014.2</h3><a href="IT.32.VE.014.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.015.1</h3><a href="IT.32.VE.015.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.016.1</h3><a href="IT.32.VE.016.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.017.0</h3><a href="IT.32.VE.017.0.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.018.1</h3><a href="IT.32.VE.018.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.019.3</h3><a href="IT.32.VE.019.3 (2).html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.020.1</h3><a href="IT.32.VE.020.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.021.3</h3><a href="IT.32.VE.021.3.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.022.1</h3><a href="IT.32.VE.022.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.024.1</h3><a href="IT.32.VE.024.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.025.2</h3><a href="IT.32.VE.025.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.028.1</h3><a href="IT.32.VE.028.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.029.1</h3><a href="IT.32.VE.029.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.031.1</h3><a href="IT.32.VE.031.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.032.3</h3><a href="IT.32.VE.032.3.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.033.1</h3><a href="IT.32.VE.033.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.034.1</h3><a href="IT.32.VE.034.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.035.1</h3><a href="IT.32.VE.035.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.036.1</h3><a href="IT.32.VE.036.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.037.2</h3><a href="IT.32.VE.037.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.038.1</h3><a href="IT.32.VE.038.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.039.1</h3><a href="IT.32.VE.039.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.040.1</h3><a href="IT.32.VE.040.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.041.2</h3><a href="IT.32.VE.041.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.042.1</h3><a href="IT.32.VE.042.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.043.1</h3><a href="IT.32.VE.043.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.048.0 - Assepsia Inicial</h3><a href="IT.32.VE.048.0 - Assepsia Inicial ....html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.049.1</h3><a href="IT.32.VE.049.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.050.0</h3><a href="IT.32.VE.050.0.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.051.0</h3><a href="IT.32.VE.051.0.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.052.1</h3><a href="IT.32.VE.052.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.054</h3><a href="IT.32.VE.054.html" target="_blank">Visualizar</a></li>
+        </ul>
     </div>
-  </main>
 
-  <footer class="bg-gray-200 text-center p-4 mt-10">
-    <p class="text-sm text-gray-700">© 2025 - Instruções de Trabalho</p>
-  </footer>
+    <footer>
+        <p>&copy; <span id="year"></span> - Instruções de Trabalho</p>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
