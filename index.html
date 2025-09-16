@@ -4,59 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instruções de Trabalho</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
     <style>
+        /* --- Configurações Gerais --- */
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f9f9f9;
+            background-color: #f4f7f6;
             color: #333;
+            line-height: 1.5;
         }
+
+        /* --- Cabeçalho Azul --- */
         header {
-            background: #0056b3;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
+            background-color: #0056b3;
+            color: #ffffff;
+            padding: 20px 30px;
+            border-bottom: 3px solid #004a9a;
         }
-        header h1 { margin: 0; }
+        header .title-group h1 {
+            margin: 0;
+            font-size: 1.6em;
+        }
+        header .title-group p {
+            margin: 0;
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        /* --- Container Principal --- */
         .container {
             max-width: 1000px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
+            margin: 30px auto;
+            padding: 30px;
+            background: #ffffff;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        h2 {
-            color: #0056b3;
+
+        /* --- Seção Visão Geral --- */
+        .overview {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
             border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
         }
+        .overview h2 {
+            color: #333; 
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .overview p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* --- Estilos da Lista de Links --- */
+        h2.list-title {
+            color: #0056b3;
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        
+        /* --- Lupa de Pesquisa --- */
+        .search-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-wrapper .fa-search {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            z-index: 2;
+        }
+        #itSearchInput {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box; 
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        #itSearchInput:focus {
+            outline: none;
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0,86,179,0.3);
+        }
+
+        /* --- Contador de ITs --- */
+        .it-counter {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 20px;
+        }
+        
         ul.it-list {
             list-style: none;
             padding: 0;
+            margin-top: 0;
         }
+        
         ul.it-list li {
-            margin-bottom: 15px;
-            padding: 15px;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            background: #fefefe;
+            background: #fdfdfd;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
         }
+        ul.it-list li:hover {
+             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+             border-color: #0056b3;
+        }
+        
         ul.it-list li h3 {
-            margin: 0 0 10px;
-            color: #0056b3;
+            margin: 0;
+            color: #333;
+            font-size: 1.1em;
+            word-break: break-word; 
         }
+        
         ul.it-list li a {
             display: inline-block;
-            background: #28a745;
+            background: #0056b3; 
             color: white;
-            padding: 8px 12px;
+            padding: 10px 15px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 0.9em;
+            flex-shrink: 0;
+            margin-left: 20px;
+            transition: background-color 0.2s ease;
         }
-        ul.it-list li a:hover { background: #218838; }
+        ul.it-list li a:hover { 
+            background: #004a9a; 
+        }
+
+        /* --- Caixa de Informações --- */
+        .info-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e6f7ff;
+            border: 1px solid #b3e0ff;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .info-box .info-icon {
+            font-size: 1.5em;
+            color: #0056b3;
+            margin-right: 15px;
+            padding-top: 3px;
+        }
+        .info-box .info-content strong {
+            display: block;
+            font-size: 1.1em;
+            color: #004a9a;
+            margin-bottom: 5px;
+        }
+        .info-box .info-content p {
+            margin: 0;
+            color: #333;
+        }
+
+        /* --- Footer --- */
         footer {
             text-align: center;
             padding: 20px;
@@ -64,62 +188,157 @@
             color: #fff;
             margin-top: 30px;
         }
+        
+        /* --- Responsividade --- */
+         @media (max-width: 768px) {
+            .container {
+                margin: 15px;
+                padding: 20px;
+            }
+            .overview {
+                padding-bottom: 20px;
+                margin-bottom: 25px;
+            }
+            ul.it-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            ul.it-list li h3 {
+                margin-bottom: 15px;
+            }
+            ul.it-list li a {
+                margin-left: 0;
+                width: 100%;
+                text-align: center;
+            }
+         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Portal de Instruções de Trabalho</h1>
-        <p>Lista completa de ITs disponíveis</p>
+        <div class="title-group">
+            <h1>Instruções de Trabalho</h1>
+            <p>Guia completo para procedimentos operacionais seguros e eficientes</p>
+        </div>
     </header>
+    
+    <main class="container">
+        
+        <section class="overview">
+            <h2>Visão Geral</h2>
+            <p>Este documento contém instruções detalhadas para garantir que todas as atividades sejam realizadas de maneira segura, eficiente e conforme os padrões estabelecidos. Siga cada etapa cuidadosamente e consulte seu supervisor em caso de dúvidas.</p>
+        </section>
 
-    <div class="container">
-        <h2>Instruções Disponíveis</h2>
-        <ul class="it-list">
-            <li><h3>IT.32.VE.002.2</h3><a href="IT.32.VE.002.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.004.2</h3><a href="IT.32.VE.004.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.007.1</h3><a href="IT.32.VE.007.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.011.3</h3><a href="IT.32.VE.011.3.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.013.4</h3><a href="IT.32.VE.013.4.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.014.2</h3><a href="IT.32.VE.014.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.015.1</h3><a href="IT.32.VE.015.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.016.1</h3><a href="IT.32.VE.016.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.017.0</h3><a href="IT.32.VE.017.0.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.018.1</h3><a href="IT.32.VE.018.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.019.3</h3><a href="IT.32.VE.019.3 (2).html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.020.1</h3><a href="IT.32.VE.020.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.021.3</h3><a href="IT.32.VE.021.3.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.022.1</h3><a href="IT.32.VE.022.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.024.1</h3><a href="IT.32.VE.024.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.025.2</h3><a href="IT.32.VE.025.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.028.1</h3><a href="IT.32.VE.028.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.029.1</h3><a href="IT.32.VE.029.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.031.1</h3><a href="IT.32.VE.031.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.032.3</h3><a href="IT.32.VE.032.3.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.033.1</h3><a href="IT.32.VE.033.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.034.1</h3><a href="IT.32.VE.034.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.035.1</h3><a href="IT.32.VE.035.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.036.1</h3><a href="IT.32.VE.036.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.037.2</h3><a href="IT.32.VE.037.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.038.1</h3><a href="IT.32.VE.038.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.039.1</h3><a href="IT.32.VE.039.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.040.1</h3><a href="IT.32.VE.040.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.041.2</h3><a href="IT.32.VE.041.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.042.1</h3><a href="IT.32.VE.042.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.043.1</h3><a href="IT.32.VE.043.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.048.0 - Assepsia Inicial</h3><a href="IT.32.VE.048.0 - Assepsia Inicial ....html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.049.1</h3><a href="IT.32.VE.049.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.050.0</h3><a href="IT.32.VE.050.0.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.051.0</h3><a href="IT.32.VE.051.0.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.052.1</h3><a href="IT.32.VE.052.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.054</h3><a href="IT.32.VE.054.html" target="_blank">Visualizar</a></li>
+        <h2 class="list-title">Instruções Disponíveis</h2>
+        
+        <div class="search-wrapper">
+            <i class="fas fa-search"></i>
+            <input type="text" id="itSearchInput" placeholder="Pesquisar pelo nome ou código da IT...">
+        </div>
+        
+        <ul class="it-list" id="itList">
+            <li><h3>IT.32.VE.002.2 - Descarregamento de Ácido Sulfúrico 98%</h3><a href="IT.32.VE.002.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.004.2 - Fervura de Soda - Aparelho 1</h3><a href="IT.32.VE.004.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.007.1 - Processo Operacional – Desidratação Etanol Hidratado</h3><a href="IT.32.VE.007.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.011.3 - Partida da Destilação do Vinho – Aparelho 2</h3><a href="IT.32.VE.011.3.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.013.4 - Partida da Destilação do Vinho – Aparelho 1</h3><a href="IT.32.VE.013.4.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.014.2 - Partida e Parada Fermentação</h3><a href="IT.32.VE.014.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.015.1 - Partida e Parada das Centrífugas de Vinho</h3><a href="IT.32.VE.015.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.016.1 - Dosagem de Antibióticos</h3><a href="IT.32.VE.016.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.017.0 - Remoção de Impureza das Dornas</h3><a href="IT.32.VE.017.0.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.018.1 - Multiplicação de Levedo</h3><a href="IT.32.VE.018.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.019.3 - Desmontagem e Limpeza das Centrífugas de Vinho</h3><a href="IT.32.VE.019.3 (2).html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.020.1 - Partida e Parada Coluna de CO2</h3><a href="IT.32.VE.020.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.021.3 - Inversão do Anel de Alimentação</h3><a href="IT.32.VE.021.3.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.022.1 - Operação de Limpeza dos Trocadores de Calor a Placas</h3><a href="IT.32.VE.022.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.024.1 - Operação Preparo de Soda Líquida Aparelho de Destilação 2</h3><a href="IT.32.VE.024.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.025.2 - Virada de Tanque Hidratado</h3><a href="IT.32.VE.025.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.028.1 - Partida do Aparelho Anidro</h3><a href="IT.32.VE.028.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.029.1 - Parada do Aparelho Anidro</h3><a href="IT.32.VE.029.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.031.1 - Retirada de Óleo Fúsel das Tomadas das Bandejas</h3><a href="IT.32.VE.031.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.032.3 - Lavagem de Óleo Fúsel</h3><a href="IT.32.VE.032.3.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.033.1 - Operação Preparo de Soda Líquida Aparelho de Destilação 1</h3><a href="IT.32.VE.033.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.034.1 - Fervura de Soda - Aparelho 2</h3><a href="IT.32.VE.034.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.035.1 - Operação das Torres de Resfriamento Fermentação</h3><a href="IT.32.VE.035.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.036.1 - Desentupimento fundo de Dorna</h3><a href="IT.32.VE.036.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.037.2 - Virada de Tanque Anidro</h3><a href="IT.32.VE.037.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.038.1 - Correção do Grau Alcoólico do Etanol</h3><a href="IT.32.VE.038.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.039.1 - Assepsia dos Tanques de Caldo e Mel</h3><a href="IT.32.VE.039.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.040.1 - Carregamento de Levedo via Tanque de CIP</h3><a href="IT.32.VE.040.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.041.2 - Recuperação da Flegma via Tanque CIP</h3><a href="IT.32.VE.041.2.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.042.1 - Carregamento de Óleo Fúsel</h3><a href="IT.32.VE.042.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.043.1 - Inertização da Linha de Ácido Sulfúrico</h3><a href="IT.32.VE.043.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.048.0 - Assepsia Inicial da Fermentação</h3><a href="IT.32.VE.048.0 - Assepsia Inicial ....html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.049.1 - Retirar Válvulas</h3><a href="IT.32.VE.049.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.050.0 - Manutenção em Válvulas Borboleta</h3><a href="IT.32.VE.050.0.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.051.0 - Instalar Válvulas Borboletas</h3><a href="IT.32.VE.051.0.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.052.1 - Manutenção em Caixa Redutora Válvula</h3><a href="IT.32.VE.052.1.html" target="_blank">Visualizar</a></li>
+            <li><h3>IT.32.VE.054 - Assepsia Dornas</h3><a href="IT.32.VE.054.html" target="_blank">Visualizar</a></li>
         </ul>
-    </div>
+        
+        <div id="itCounter" class="it-counter"></div>
 
+        <section class="info-box">
+            <span class="info-icon"><i class="fas fa-info-circle"></i></span>
+            <div class="info-content">
+                <strong>Informações Importantes</strong>
+                <p>Em caso de emergência, siga o procedimento de evacuação e notifique imediatamente o responsável pela segurança. Todos os incidentes devem ser reportados, independentemente da gravidade.</p>
+            </div>
+        </section>
+
+    </main>
+    
     <footer>
         <p>&copy; <span id="year"></span> - Instruções de Trabalho</p>
     </footer>
+    
     <script>
+        // Script do ano (existente)
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+    
+    <script>
+        // Como este script está no fim do <body>, não precisamos do "DOMContentLoaded".
+        // Os elementos abaixo já existem.
+        
+        // 1. Seleciona os elementos
+        const searchInput = document.getElementById("itSearchInput");
+        const itList = document.getElementById("itList");
+        const listItems = itList.querySelectorAll("li"); 
+        const counterElement = document.getElementById("itCounter");
+        const totalCount = listItems.length;
+
+        // 2. Função para filtrar a lista
+        function filterList() {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            for (let i = 0; i < listItems.length; i++) {
+                const item = listItems[i];
+                const itemText = item.getElementsByTagName("h3")[0].textContent.toLowerCase();
+                
+                if (itemText.includes(searchTerm)) {
+                    // CORREÇÃO: Apenas remove o "display: none" e deixa o CSS
+                    // (stylesheet) cuidar de mostrar o item.
+                    item.style.display = ""; 
+                    visibleCount++;
+                } else {
+                    item.style.display = "none";
+                }
+            }
+            
+            // 3. Atualiza o contador
+            counterElement.textContent = "Exibindo " + visibleCount + " de " + totalCount + " ITs.";
+        }
+
+        // 4. Adiciona o 'escutador' de eventos
+        searchInput.addEventListener("input", filterList);
+        
+        // 5. Chama a função no início para definir o contador inicial
+        filterList(); 
+    </script>
+
 </body>
 </html>
