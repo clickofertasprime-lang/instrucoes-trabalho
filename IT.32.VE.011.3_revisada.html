@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>IT.32.VE.011.3 – Partida da Destilação do Vinho – Aparelho 2</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9fafc; color: #222; }
+    header { text-align: center; padding: 20px; margin-bottom: 30px; border-bottom: 4px solid #003366; background: #e6eef7; border-radius: 8px; }
+    h1 { color: #003366; margin: 0; }
+    h2 { color: #005599; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+    ul { margin: 10px 0 10px 20px; }
+    p { margin: 8px 0; white-space: pre-wrap; }
+    table { width: 100%; border-collapse: collapse; margin: 30px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; vertical-align: top; }
+    th { background-color: #003366; color: white; font-weight: bold; position: sticky; top: 0; z-index: 2; }
+    td.quimico { background-color: #ffe5d9; }
+    td.altura { background-color: #fde2e2; }
+    td.equipamento { background-color: #fff3cd; }
+    td.ferramenta { background-color: #e2f0d9; }
+    td.ergonomia { background-color: #e6e6fa; }
+    td.ruido { background-color: #f0f0f0; }
+    td.superficie { background-color: #ffe0b2; }
+    tr:nth-child(even) { background-color: #f7f9fc; }
+    tr:hover { background-color: #e8f0fe; }
+    .icon { font-size: 1.1em; margin-right: 6px; }
+    footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #555; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>IT.32.VE.011.3</h1>
+  <p class="subtitle">Partida da Destilação do Vinho – Aparelho 2</p>
+</header>
+<h2>Objetivo</h2>
+<p>Destilar o vinho para obtenção do etanol hidratado conforme especificação INPM.</p>
+<h2>Abrangência</h2>
+<p>Esta Instrução de Trabalho aplica-se a Destilaria da Usina Vertente.</p>
+<p>CONCEITOS</p>
+<h2>Siglas E Abreviaturas</h2>
+<p>APR - Análise Preliminar de Risco</p>
+<p>COI - Centro Operacional Integrado</p>
+<p>EPI - Equipamentos de Proteção Individual</p>
+<p>ETA - Estação de Tratamento de Afluente</p>
+<p>GAIA - Gerenciamento de Aspectos e Impactos Ambientais</p>
+<p>INPM - Instituto Nacional de Pesos de Medidas</p>
+<p>IT - Instrução de Trabalho</p>
+<p>NR - Normas Regulamentadoras</p>
+<p>SSMAQ - Saúde, Segurança, Meio Ambiente e Qualidade</p>
+<p>8S - Programa 8S</p>
+<p>FO - Formulário</p>
+<p>VE - Vertente</p>
+<p>DDS - Diálogo Diário de Segurança</p>
+<h2>Definições</h2>
+<p>Variáveis de Controle: refere-se a variável que pode ser controlada na etapa do processo em que a sua medição é efetuada e a mesma impacta na qualidade do processo e/ou do produto.</p>
+<p>Variável de Monitoramento: refere-se a variável que não pode ser controlada na etapa de processo em que a sua medição é efetuada e a mesma não impacta na qualidade do processo e/ou do produto.</p>
+<p>4. DOCUMENTOS ASSOCIADOS</p>
+<p>FO.32.VE.009 - Limpeza de Equipamentos da Destilaria</p>
+<p>IT.13.VE.008 - Permissão de Trabalho PT</p>
+<p>IT 13.VE.009 - Análise de Perigos e Riscos</p>
+<p>IT.32.VE.024 - Operação Preparo de Soda Líquida Aparelho 2</p>
+<p>GA.02.010 - Processos Industriais</p>
+<p>GA.02.004 - Indústria - Áreas Comuns</p>
+<p>FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS</p>
+<p>5. RESPONSABILIDADES</p>
+<p>5.1. OPERADOR DA DESTILARIA – COI</p>
+<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer.</p>
+<p>5.2. OPERADOR DA DESTILARIA – CAMPO</p>
+<p>Realizar a verificação das manobras executadas pelo operador do COI quando solicitado e realizar manobras em válvulas manuais.</p>
+<p>5.3. OPERADOR DA ETA</p>
+<p>Ligar a bomba das torres da destilaria.</p>
+<p>6. CRITÉRIOS</p>
+<p>As operações deverão ter início, após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</p>
+<p>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</p>
+<p>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</p>
+<p>Atendimento as normas de uso de EPI’s (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</p>
+<p>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</p>
+<p>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</p>
+<p>Qualquer tanque de armazenamento deve estar contemplado de sistema de contenção e proteção quanto a contaminação do Meio Ambiente</p>
+<p>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</p>
+<p>7. PROCEDIMENTOS</p>
+<p>7.1. PARTIDA ETANOL HIDRATADO APARELHO Nº 2</p>
+<p>a) O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2 e esperar confirmação;</p>
+<p>b) O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança;</p>
+<p>c) Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático;</p>
+<p>d) Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado;</p>
+<p>e) O operador de COI deve:</p>
+<p>f) Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2 e esperar confirmação;</p>
+<p>g) Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas e esperar confirmação;</p>
+<p>h) Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e esperar confirmação;</p>
+<p>i) Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm² e esperar confirmação;</p>
+<p>j) Verificar adequação dos seguintes itens abaixo:</p>
+<p>Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2</p>
+<p>Pressão de vapor deve estar acima de 0,50kgf/cm²; 3</p>
+<p>Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K. (Fig. 1) estão 100% abertas;</p>
+<p>(Fig. 1)</p>
+<p>k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;</p>
+<p>(Fig. 2)</p>
+<p>(Fig. 3)</p>
+<p>l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação;</p>
+<p>m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%;</p>
+<p>n) Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e recalque se estão 100% abertas. Esperar confirmação;</p>
+<p>o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³;</p>
+<p>p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação;</p>
+<p>q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático;</p>
+<p>r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;</p>
+<p>s) Controlar a entrada de vinho e vapor para manter a bandeja (A 1) da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;</p>
+<p>t) Abrir 30% a válvula de entrada de vapor coluna D;</p>
+<p>u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;</p>
+<p>v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;</p>
+<p>w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;</p>
+<p>x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:</p>
+<p>1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas e esperar confirmação;</p>
+<p>2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;</p>
+<p>3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;</p>
+<p>4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;</p>
+<p>5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);</p>
+<p>6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça. Esperar confirmação;</p>
+<p>7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;</p>
+<p>8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados esperar confirmação;</p>
+<p>9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;</p>
+<p>10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsil;</p>
+<p>11. Abrir 20% a válvula de água no decantador de óleo fúsel;</p>
+<p>12. Abrir 10% água no tanque 1 de óleo fúsel;</p>
+<p>13. Fechar 100% a válvula de dreno do decantador de óleo fusel;</p>
+<p>14. Controlar nivel do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;</p>
+<p>15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;</p>
+<p>16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol. Esperar confirmação;</p>
+<p>17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;</p>
+<p>18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;</p>
+<p>(Fig. 4)</p>
+<p>19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;</p>
+<p>20. Abrir válvula de acesso aos tanques de medição;</p>
+<p>21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.</p>
+<p>y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;</p>
+<p>z) Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;</p>
+<p>aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;</p>
+<p>bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;</p>
+<p>cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo</p>
+<p>< 107°C enviar a flegmaça para o tanque de etanol de 2º;</p>
+<p>dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;</p>
+<p>ee) Monitorar as variáveis 977 e 6170 do GAtec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;</p>
+<p>ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</p>
+<p>7.2. AÇÕES EM CASO DE ANOMALIA</p>
+<p>1 Em caso de falta de pressão, 1 kgf/cm², deve se comunicar o operador da ETA para verificar a abertura de válvula e o funcionamento das bombas.</p>
+<p>² verificar se as centrífugas estão operando.</p>
+<p>3 Se o GL do vinho estiver maior que 9% não ultrapassar a vazão de vinho no aparelho230m³.</p>
+<p>4 Caso a pressão esteja abaixo de 0,60kgf/cm² comunicar coordenadores de turno e os setores Caldeira e Tratamento de Caldo.</p>
+<p>5 Quando a perda na vinhaça for elevada, conforme variável 977 do GAtec, diminuir a vazão de vinho, aumentar o vapor na coluna A e verificar vazamento nos trocadores K. Quando a perda na flegmaça for elevada, conforme variável 6170 do GAtec, aumentar o vapor na base da coluna B e verificar a presença de óleo fúsel na amostra.</p>
+<p>6 Quando o INPM estiver abaixo da especificação (92,5º, conforme variável 5981 GAtec), comunicar o líder e reduzir a abertura da válvula de retirada da coluna B do aparelho 2, diminuindo a produção. Quando o INPM estiver acima da especificação (94,6º, conforme variável 5981 GAtec), aumentar a abertura da válvula de retirada da coluna B do aparelho 2.</p>
+<p>7 Caso haja qualquer vazamento de etanol de pequenas proporções, comunicar o líder para sanar imediatamente. Caso o vazamento seja de grandes proporções, comunicar o Controle de Emergência.</p>
+<p>TABELA DE PERIGOS E RISCOS</p>
+<p>8. ASPECTOS SSMAQ</p>
+<p>8.1. ASPECTOS DE MEIO AMBIENTE</p>
+<p>As informações referentes aos Aspectos e Impactos Ambientais e seus controles operacionais estão disponíveis para consulta através da Planilha GAIA (Gerenciamento de Aspectos e Impactos Ambientais), e podem ser consultadas nos setores de forma eletrônica ou física.</p>
+<p>8.2. ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</p>
+<p>Durante a execução das atividades devem ser seguidos os requisitos do Programa 8S e as Boas Práticas de Fabricação.</p>
+<p>9. REFERÊNCIAS NORMATIVAS</p>
+<p>NR1 - Disposições Gerais</p>
+<p>NR6 – Equipamento de Proteção Individual – EPI</p>
+<p>NR8 - Edificações</p>
+<p>NR9 - Programas de Prevenção de Riscos Ambientais</p>
+<p>NR11 - Transporte, Movimentação, Armazenagem e Manuseio de Materiais</p>
+<p>NR12 - Segurança no Trabalho em Máquinas e Equipamentos</p>
+<p>NR15 - Atividades e Operações Insalubres.</p>
+<p>NR17 – Ergonomia</p>
+<p>NR18 - Condições e Meio Ambiente de Trabalho na Indústria da Construção</p>
+<p>NR20 – Segurança e Saúde no Trabalho com Inflamáveis e Combustíveis</p>
+<p>NR23 - Proteção Contra Incêndios</p>
+<p>NR26 -</p>
+<p>NR33 -</p>
+<p>NR34 -</p>
+<p>NR35 – Trabalho em Altura</p>
+
+<h2>Tabela de Perigos e Riscos</h2>
+<table>
+  <tr><th>Item do documento / Tarefa</th><th>Símbolo</th><th>Perigos</th><th>Riscos</th><th>Medida de controle</th><th>Medida de controle</th></tr>
+  <tr><td class=''>Item do documento / Tarefa</td><td class=''>Símbolo</td><td class=''>Perigos</td><td class=''>Riscos</td><td class=''>Controles de 
+Hierarquia</td><td class=''>Equipamento de proteção individual (EPI)</td></tr>
+  <tr><td class=''>O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2. Esperar confirmação.
+O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança.
+Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático.
+Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado.
+O operador de COI deve: 
+Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2. Esperar confirmação.
+Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas. Esperar confirmação.
+Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e
+e esperar confirmação;
+Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm²; 1 Esperar confirmação.
+Verificar adequação dos seguintes itens abaixo:
+1. Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2
+2. Pressão de vapor deve estar acima de 0,50kgf/cm²; 3
+3. Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K (Fig. 1) estão 100% abertas;
+k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;
+l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação.
+m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%.
+n)  Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Postura inadequada ao realizar operações COI</td><td class=''>Treinamento NR-17;
+Ginastica laboral; 
+DDS;
+Laudo ergonômico
+Cadeiras ergonômicas;
+Exames periódicos;
+Apoio de pés e mãos;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto ergonômico;</td></tr>
+  <tr><td class=''>O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2. Esperar confirmação.
+O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança.
+Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático.
+Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado.
+O operador de COI deve: 
+Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2. Esperar confirmação.
+Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas. Esperar confirmação.
+Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e
+e esperar confirmação;
+Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm²; 1 Esperar confirmação.
+Verificar adequação dos seguintes itens abaixo:
+1. Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2
+2. Pressão de vapor deve estar acima de 0,50kgf/cm²; 3
+3. Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K (Fig. 1) estão 100% abertas;
+k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;
+l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação.
+m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%.
+n)  Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Subir e descer escada repetidamente</td><td class=''>Treinamento NR-17;
+Ginastica laboral; 
+DDS;
+Laudo ergonômico
+Cadeiras ergonômicas;
+Exames periódicos;
+Apoio de pés e mãos;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto ergonômico;</td></tr>
+  <tr><td class=''>O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2. Esperar confirmação.
+O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança.
+Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático.
+Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado.
+O operador de COI deve: 
+Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2. Esperar confirmação.
+Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas. Esperar confirmação.
+Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e
+e esperar confirmação;
+Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm²; 1 Esperar confirmação.
+Verificar adequação dos seguintes itens abaixo:
+1. Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2
+2. Pressão de vapor deve estar acima de 0,50kgf/cm²; 3
+3. Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K (Fig. 1) estão 100% abertas;
+k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;
+l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação.
+m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%.
+n)  Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Abertura e fechamento manual de Válvulas</td><td class=''>Treinamento NR-17;
+Ginastica laboral; 
+DDS;
+Laudo ergonômico
+Cadeiras ergonômicas;
+Exames periódicos;
+Apoio de pés e mãos;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto ergonômico;</td></tr>
+  <tr><td class=''>O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2. Esperar confirmação.
+O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança.
+Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático.
+Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado.
+O operador de COI deve: 
+Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2. Esperar confirmação.
+Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas. Esperar confirmação.
+Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e
+e esperar confirmação;
+Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm²; 1 Esperar confirmação.
+Verificar adequação dos seguintes itens abaixo:
+1. Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2
+2. Pressão de vapor deve estar acima de 0,50kgf/cm²; 3
+3. Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K (Fig. 1) estão 100% abertas;
+k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;
+l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação.
+m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%.
+n)  Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Esforço repetitivo</td><td class=''>Treinamento NR-17;
+Ginastica laboral; 
+DDS;
+Laudo ergonômico
+Cadeiras ergonômicas;
+Exames periódicos;
+Apoio de pés e mãos;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto ergonômico;</td></tr>
+  <tr><td class=''>O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2. Esperar confirmação.
+O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança.
+Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático.
+Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado.
+O operador de COI deve: 
+Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2. Esperar confirmação.
+Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas. Esperar confirmação.
+Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e
+e esperar confirmação;
+Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm²; 1 Esperar confirmação.
+Verificar adequação dos seguintes itens abaixo:
+1. Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2
+2. Pressão de vapor deve estar acima de 0,50kgf/cm²; 3
+3. Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K (Fig. 1) estão 100% abertas;
+k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;
+l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação.
+m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%.
+n)  Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e</td><td class=''></td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Ruído</td><td class=''>Exposição aos ruídos de máquinas e equipamentos do processo;</td><td class=''>Treinamentos de PCA;
+Exame Admissional e Periódico;
+Controle do fornecimento do EPA;
+Fiscalização do uso do EPA;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto ergonômico;</td></tr>
+  <tr><td class=''>O operador de COI deve comunicar o operador da caldeira e da fermentação sobre a partida do aparelho 2. Esperar confirmação.
+O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção e protetor auricular e botina de segurança.
+Ao entrar na Destilaria (área classificada), o operador de campo deve desligar o celular, e adentrar a área apenas com rádio antiestático.
+Caso esteja com colete refletivo, a vestimenta deve ser retirada e deixada no suporte apropriado.
+O operador de COI deve: 
+Solicitar ao operador de campo que abra 50% as válvulas de entrada de água dos condensadores E1 e E2. Esperar confirmação.
+Solicitar ao operador de campo que verifique as válvulas do suspiro se estão 20% abertas. Esperar confirmação.
+Solicitar ao operador da ETA que ligue a bomba que envia água para os condensadores do aparelho nº2 e
+e esperar confirmação;
+Solicitar ao operador de campo que verifique a pressão de água na linha, que deve estar acima de 1kgf/cm²; 1 Esperar confirmação.
+Verificar adequação dos seguintes itens abaixo:
+1. Nível de vinho no tanque de centrifugado deve estar entre 25 e 35%; 2
+2. Pressão de vapor deve estar acima de 0,50kgf/cm²; 3
+3. Solicitar ao operador do campo para verificar se as válvulas de passagem vinho/vinhaça do Trocador K (Fig. 1) estão 100% abertas;
+k) Abrir a válvula automática de vapor V1 existente nas colunas A (Fig. 2) e B1(Fig. 3) do Aparelho no. 02 até 2%. Assim, um perfil de temperatura atingirá a coluna ao ponto de receber o vinho centrifugado;
+l) Abrir 100% a válvula manual de entrada de vinho no aquecedor e fechar 100% a válvula manual que recircular soda. Esperar confirmação.
+m) Quando a temperatura da bandeja (A 20) estiver entre 85 a 90ºC abrir válvula automática de vinho para 10%.
+n)  Solicitar ao operador de campo a verificação das válvulas do tanque de vinho centrifugado de sucção e</td><td class=''></td><td class='ferramenta'><i class='fa-solid fa-hammer icon'></i>Ferramentas manuais</td><td class=''>Manuseio de ferramentas;
+Contato com válvulas;
+Batida contra;
+Prensagem de membros;</td><td class=''>Inspeção visual das ferramentas;
+Sinalizações de segurança;
+Treinamento NR12;
+Ferramentas intrínsecas;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto ergonômico;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Trabalho em Altura</td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Acesso pela escada marinheiro;
+Acesso a piso de níveis superior;</td><td class=''>Treinamento NR35;
+Guarda corpo os patamares;
+Sinalizações de segurança;
+Linha de vida;
+Pontos de ancoragem;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class='quimico'><i class='fa-solid fa-flask-vial icon'></i>Produto Químico</td><td class='quimico'><i class='fa-solid fa-flask-vial icon'></i>Contato direto com produto;
+Manuseio manual de válvulas;
+Manipulação de líquidos inflamáveis;</td><td class=''>Treinamento NR26;
+Caixa de contenção;
+Dhipoterine no local;
+Chuveiro de emergência;
+FISPQ no local;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class=''>Contenção de Combustível</td><td class=''>Acessar dentro da área crítica;
+Atividades manuais próximo a caixas de contenção;
+Atividades manuais próximo a tubulações e tanques com líquidos inflamáveis;
+Acúmulo de gazes e líquidos inflamáveis nas canaletas e contenção;
+Manuseio de ferramentas inadequada para área classificada;</td><td class=''>Válvulas de alívio;
+Local arejado;
+Controle de acesso de área classificada;
+Radio intrínseco;
+Ferramentas adequada;
+Treinamento NR20;
+Treinamento NR26;
+Treinamento NR23;
+Sistema de Hidrantes;
+Chuveiro de emergência;
+Extintores no local;
+Sinalizações de segurança;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class=''>Concentração Explosiva</td><td class=''>Acessar dentro da área crítica;
+Atividades manuais próximo a caixas de contenção;
+Atividades manuais próximo a tubulações e tanques com líquidos inflamáveis;
+Acúmulo de gazes e líquidos inflamáveis nas canaletas e contenção;
+Manuseio de ferramentas inadequada para área classificada;</td><td class=''>Válvulas de alívio;
+Local arejado;
+Controle de acesso de área classificada;
+Radio intrínseco;
+Ferramentas adequada;
+Treinamento NR20;
+Treinamento NR26;
+Treinamento NR23;
+Sistema de Hidrantes;
+Chuveiro de emergência;
+Extintores no local;
+Sinalizações de segurança;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class=''>Incêndio</td><td class=''>Acessar dentro da área crítica;
+Atividades manuais próximo a caixas de contenção;
+Atividades manuais próximo a tubulações e tanques com líquidos inflamáveis;
+Acúmulo de gazes e líquidos inflamáveis nas canaletas e contenção;
+Manuseio de ferramentas inadequada para área classificada;</td><td class=''>Válvulas de alívio;
+Local arejado;
+Controle de acesso de área classificada;
+Radio intrínseco;
+Ferramentas adequada;
+Treinamento NR20;
+Treinamento NR26;
+Treinamento NR23;
+Sistema de Hidrantes;
+Chuveiro de emergência;
+Extintores no local;
+Sinalizações de segurança;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class=''>Fluídos Pressurizados</td><td class=''>Monitoramento de tubulações e válvulas pressurizada;
+Manobra de válvulas;
+Acesso na área classificada;</td><td class=''>Treinamento NR13;
+Treinamento NR26:
+Sinalizações de segurança;
+Válvulas de alívio;
+Controle de acesso a área classificada;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class=''>Passagem de Vapor</td><td class=''>Monitoramento de tubulações e válvulas pressurizada;
+Manobra de válvulas;
+Acesso na área classificada;</td><td class=''>Treinamento NR13;
+Treinamento NR26:
+Sinalizações de segurança;
+Válvulas de alívio;
+Controle de acesso a área classificada;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+  <tr><td class=''>recalque se estão 100% abertas e esperar confirmação;
+o) Ligar a bomba do tanque de vinho centrifugado e ajustar a vazão de vinho em 50m³.
+p) Solicitar ao operador de campo que verifique se as válvulas de sucção e recalque da bomba de extração de vinhaça estão 100% abertas. Esperar confirmação.
+q) Quando o nível da coluna A estiver em 50% abrir a válvula em 20% e ligar a bomba de extração de vinhaça e colocar a válvula em modo automático.
+r) Solicitar ao operador do campo fechar 100% a válvula para retirar o Etanol de 2º do R1 e esperar confirmação;
+s) Controlar a entrada de vinho e vapor para manter a bandeja da coluna A de 110º a 102ºC e a bandeja (A 20) de 99º a 102ºC;
+t) Abrir 30% a válvula de entrada de vapor coluna D;
+u) Abrir 100% válvula de sucção e recalque da bomba da coluna D que irá operar;
+v) Assim que o nível da coluna D estiver 20% abrir a válvula 20% e ligar a bomba, colocar a válvula em modo automático;
+w) Verificar temperatura do condensador R que deve ser de 39°C a 40°C e condensador R1 que deve estar entre 33°C a 35°C;
+x) Quando iniciar a passagem de flegma para coluna B, proceder conforme abaixo:
+
+1. Verificar válvula de sucção e recalque da bomba de refluxo coluna B se estão 100% abertas. Espera confirmação.
+2. Quando o nível do balão de refluxo da coluna B estiver em 20% abrir 20% a válvula e ligar bomba de refluxo e colocar a válvula em modo automático;
+3. Preparo de soda líquida deve estar entre 10 a 12 via Baumé conforme IT.32.VE.024;
+4. Solicitar ao operador de campo que abra as válvulas de sucção e recalque de soda cáustica;
+5. Ligar a bomba de soda cáustica. Monitorar a adição de soda cáustica na coluna B de forma que a faixa de PH do álcool hidratado esteja sempre conforme a especificação (6.0 a 8.0);
+6. Solicitar ao operador de campo que abrir 100% as válvulas manuais de sucção e recalque da bomba de extração flegmaça e esperar confirmação;
+7. Quando o nível da coluna B1 estiver em 20% abrir a válvula automática em 20%, ligar a bomba, colocar a válvula em modo automático;
+8. Solicitar ao operador do campo para verificar se os visores existentes nos condensadores E, E1, E2 do Aparelho 1 não estão totalmente cheios ou afogados. Esperar confirmação;
+9. Verificar todas as válvulas de extração de óleo fusel na coluna B conforme –IT retirada de óleo das tomadas da bandeja;
+10. Abrir 50% a válvula de entrada de óleo fúsel no decantador de óleo fúsel;
+11. Abrir 20% a válvula de água no decantador de óleo fúsel;
+12. Abrir 10% água no tanque 1 de óleo fúsel;
+13. Fechar 100% a válvula de dreno do decantador de óleo fusel;
+14. Controlar nível do tanque 1 de óleo fusel manualmente na válvula de entrada de óleo para o tanque etanol de segunda, conforme IT lavagem óleo fusel;
+15. Ligar a bomba do tanque de etanol de 2° para o tanque de vinho centrifugado;
+16. Solicitar ao operador de campo que abra 100% as válvulas de entrada e saída no lado água e etanol no trocador de etanol e esperar confirmação;
+17. Conferir válvulas atrás do painel se estão 100% abertas para que o álcool passe pelo rotâmetro;
+18. Abrir válvulas que envia etanol para o ionic II conforme figura 4 e fechar válvula gaveta que by-pass o ionic II;
+19. Abrir válvulas de entrada e saída dos respectivos vasos: catiônico e aniônico;
+20. Abrir válvula de acesso aos tanques de medição.
+21. Abrir válvula de entrada do tanque de medição para adicionar etanol hidratado.
+y) Assim que a temperatura da bandeja 8 atingir 94% abrir válvula automática de retirada de etanol em 35%;
+z)  Solicitar ao operador de campo que monitore o teor alcoólico através da proveta do painel4 e esperar confirmação;
+aa) Monitorar o nível do tanque etanol IONIC até que o nível de trabalho atinja 20%;
+bb) Ligar a bomba do tanque de IONIC e colocar o inversor em modo automático;
+cc) Quando houver queda de vapor V1 e a coluna B1 estiver com a temperatura do topo         
+< 107°C enviar a flegmaça para o tanque de etanol de 2º;
+dd) Abrir a válvula automática ON/OFF que envia para o tanque de etanol de 2º e fechar a válvula automática de flegmaça para tanque cip até que tenhamos a temperatura > 107°C no topo da coluna B1;
+ee) Monitorar as variáveis 977 e 6170 do Gatec, para manter-se abaixo das perdas aceitáveis de etanol na vinhaça e na flegmaça5;
+ff) Monitorar o processo para verificar se não há derramamento de etanol ou vazamento em bombas6.</td><td class=''></td><td class='superficie'><i class='fa-solid fa-fire icon'></i>Superfície Quente</td><td class='superficie'><i class='fa-solid fa-fire icon'></i>Atividades manuais em válvulas;
+Transitar pela área classificada;
+Atividades próximo a tubulações e equipamento quente.</td><td class=''>Controle de acesso a área classificada;  
+Treinamento NR26:
+Isolamentos térmicos;
+Sinalização de segurança;</td><td class=''>Capacete com jugular;
+Protetor auricular;
+Óculos de segurança;
+Luvas de proteção;
+Calçado de segurança;
+Cinto de segurança tipo paraquedista;
+Talabarte duplo;
+Cinto ergonômico;
+Máscara respiratória; 
+Macacão impermeável;
+Uniforme de aproximação de incêndio;</td></tr>
+</table>
+<footer>
+  <p>Data: 04/02/2025 – Revisão: 3</p>
+</footer>
+</body>
+</html>
