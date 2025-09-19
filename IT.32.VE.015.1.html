@@ -1,117 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>IT.32.VE.015.1</title>
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; line-height:1.5; padding:20px; max-width:900px; margin:auto; }
-    h1 { font-size:20px; margin-bottom:8px; }
-    .meta { color:#555; font-size:12px; margin-bottom:12px; }
-    p { margin:6px 0; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT.32.VE.015 - Partida e Parada das Centrífugas de Vinho</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9fafc; color: #222; }
+        header { text-align: center; padding: 20px; margin-bottom: 30px; border-bottom: 4px solid #003366; background: #e6eef7; border-radius: 8px; }
+        h1 { color: #003366; margin: 0; }
+        h2 { color: #005599; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        h3 { color: #0077aa; margin-top: 25px; }
+        p { margin: 10px 0; }
+        ul, ol { margin: 10px 0; padding-left: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; vertical-align: top; }
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        .underline { text-decoration: underline; }
+        .procedure-list { list-style-type: decimal; padding-left: 25px; }
+        .procedure-list ol { list-style-type: lower-alpha; padding-left: 20px; }
+        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #555; }
+        .icon { font-size: 1.1em; margin-right: 6px; }
+        td.quimico { background-color: #ffe5d9; }
+        td.ergonomia { background-color: #e2f0d9; }
+        td.ruido { background-color: #fff3cd; }
+        td.estrutural { background-color: #fde2e2; }
+        td.ferramenta { background-color: #e8f0fe; }
+        td.operacional { background-color: #d1e7dd; } /* Adicionei uma cor para "Procedimento Operacional" */
+        tr:nth-child(even) { background-color: #f7f9fc; }
+        tr:hover { background-color: #f0f7ff; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <h1>IT.32.VE.015.1</h1>
-  <div class="meta">Gerado: 2025-09-14T23:48:13.935852Z — arquivo original: IT.32.VE.015.1.docx</div>
-  <p>OBJETIVO - Alcançar a estabilidade dos parâmetros de processo das centrífugas de vinho em até 12 minutos. Parar as centrífugas de vinho em até 10 minutos.</p><br/>
-<p>ABRANGÊNCIA - Esta instrução de trabalho aplica-se a Destilaria da unidade industrial Vertente.</p><br/>
-<p>CONCEITOS</p><br/>
-<p>SIGLAS E ABREVIATURA</p><br/>
-<p>APR – Análise Preliminar de Risco</p><br/>
-<p>BPF – Boas Práticas de Fabricação</p><br/>
-<p>COI - Centro Operacional Integrado</p><br/>
-<p>EPI - Equipamentos de Proteção Individual</p><br/>
-<p>GAIA – Gerenciamento de Aspectos e Impactos Ambientais</p><br/>
-<p>IT – Instrução de Trabalho</p><br/>
-<p>MTE – Ministério do Trabalho e Emprego</p><br/>
-<p>NR - Normas Regulamentadoras</p><br/>
-<p>SSMAQ - Saúde, Segurança, Meio Ambiente e Qualidade</p><br/>
-<p>8S – Programa 8S</p><br/>
-<p>DEFINIÇÕES</p><br/>
-<p>Variáveis de Controle: refere-se a variável que pode ser controlada na etapa do processo aonde a sua medição é efetuada e impacta na qualidade do processo e/ou do produto.</p><br/>
-<p>Variável de Monitoramento: refere-se a variável que não pode ser controlada na etapa de processo aonde a sua medição é efetuada e não impacta na qualidade do processo e/ou do produto.</p><br/>
-<p>DOCUMENTOS ASSOCIADOS</p><br/>
-<p>IT.13.VE.008 - Permissão de Trabalho - PT</p><br/>
-<p>IT 13.VE.009 - Análise de Perigos e Riscos</p><br/>
-<p>FO.32.VE.005 - Limpeza de Equipamento da Fermentação</p><br/>
-<p>FO.32.VE.010 - Acompanhamento de Boquilhas das Centrífugas</p><br/>
-<p>Variável de Perda de Levedo no Vinho (GAtec) – 958, 959, 960, 961 e 6175</p><br/>
-<p>Variável de Concentração de Levedo (GAtec) – 71779, 71784, 71789, 71814 e 71819</p><br/>
-<p>RESPONSABILIDADES</p><br/>
-<p>OPERADOR DA DESTILARIA – COI</p><br/>
-<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer.</p><br/>
-<p>OPERADOR DA DESTILARIA – CAMPO</p><br/>
-<p>Realizar verificação das manobras do operador do COI quando solicitado e seguir requisitos deste procedimento.</p><br/>
-<p>CRITÉRIOS</p><br/>
-<p>As operações deverão ter início, após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</p><br/>
-<p>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</p><br/>
-<p>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</p><br/>
-<p>Atendimento as normas de uso de EPI’s (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</p><br/>
-<p>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</p><br/>
-<p>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</p><br/>
-<p>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</p><br/>
-<p>PROCEDIMENTOS</p><br/>
-<p>Analisar as condições de vazão de vinho para a destilaria.</p><br/>
-<p>De acordo com a tabela abaixo, iniciar a partida ou parada das centrífugas de vinho levando em consideração a vazão de vinho para a Destilaria.</p><br/>
-<p>7.1. PARTIDA CENTRÍFUGA DE VINHO</p><br/>
-<p>O operador de campo deve vestir o EPI apropriado: uniforme, capacete com jugular, óculos de proteção, protetor auricular e calçado de segurança.</p><br/>
-<p>O operador de COI deve:</p><br/>
-<p>Informar ao operador de campo que irá partir a centrífuga.1</p><br/>
-<p>Anotar no relatório de turno o horário de partida da centrífuga.</p><br/>
-<p>Verificar o nível do tanque de vinho a centrifugar, que deve estar maior que 12%.2</p><br/>
-<p>Solicitar ao operador do campo para confirmar se as válvulas e drenos do filtro de vinho centrifugado estão fechadas.3</p><br/>
-<p>Solicitar ao operador de campo para abrir válvula de entrada e saída do filtro de vinho. Aguardar confirmação.</p><br/>
-<p>Solicitar ao operador de campo que confirme se o nível do óleo da centrífuga de vinho está normal.4</p><br/>
-<p>Abrir válvula de entrada de água em 35% da centrifuga de vinho.</p><br/>
-<p>Solicitar ao operador de campo que confirme a saída da água no duto de fermento. Aguardar confirmação.</p><br/>
-<p>Solicitar ao operador de campo que abra as válvulas de água de resfriamento de óleo da centrifuga de vinho. Aguardar confirmação.</p><br/>
-<p>Ligar o rotor da centrífuga de vinho selecionada para execução.</p><br/>
-<p>Solicitar ao operador do campo o acompanhamento o filtro até que encha e solicitar o fechamento total da válvula quebra-vácuo.</p><br/>
-<p>Após 8 minutos da centrífuga em rotação, abrir em 25% a válvula de entrada de vinho da centrifuga.</p><br/>
-<p>Solicitar ao operador de campo que confirme se as válvulas de sucção e recalque do tanque de vinho a centrifugar estão 100% abertas.</p><br/>
-<p>Ligar a bomba do tanque de vinho a centrifugar.</p><br/>
-<p>Aguardar até a pressão de vinho na linha chegue em 1,5 Kgf/cm2.5</p><br/>
-<p>Solicitar ao operador de campo que confirme a saída de vinho no duto de fermento. Aguardar confirmação.</p><br/>
-<p>Fechar a válvula de entrada de água da centrífuga de vinho.</p><br/>
-<p>Caso o operador do campo verifique vibração anormal do equipamento, informar o operador do COI.6</p><br/>
-<p>Solicitar ao operador de campo, que monitore a concentração de fermento e a perda no vinho, para regular a abertura da válvula de entrada de vinho da centrífuga.7,8</p><br/>
-<p>De acordo com as análises do laboratório de concentração e perda de levedo no vinho, conforme variáveis do GAtec 71779, 71784, 71789, 71814 e 71819 e 958, 959, 960, 961 e 6175, ajustar a válvula de entrada de vinho. 7,8</p><br/>
-<p>PARADA</p><br/>
-<p>Informar o operador de campo que irá parar uma centrífuga.</p><br/>
-<p>Reduzir a carga do vinho que estiver no momento pela metade.</p><br/>
-<p>Abrir válvula de água da centrifuga em 50%.</p><br/>
-<p>Solicitar ao operador de campo que confirme a saída de água no duto de fermento. Aguardar confirmação.</p><br/>
-<p>Fechar válvula de vinho da centrífuga.</p><br/>
-<p>Desligar o rotor da centrífuga de vinho.</p><br/>
-<p>Solicitar ao operador de campo para acionar o freio da centrífuga de vinho.</p><br/>
-<p>Após a centrífuga de vinho estar parada, fechar a válvula de água da centrífuga.</p><br/>
-<p>Anotar no relatório de turno o horário da parada da centrífuga.</p><br/>
-<p>7.3 AÇÕES EM CASO DE ANOMALIA</p><br/>
-<p>1 – Caso tenha alterado o tamanho das boquilhas, anotar no FO.32.VE.010 - Acompanhamento de Boquilhas das Centrífugas</p><br/>
-<p>2 – Se o nível estiver menor que 12% não partir a centrifugação. Informar o líder que não há vinho bruto suficiente.</p><br/>
-<p>3 – Caso a indicação da válvula de drenos esteja diferente da situação no campo deve-se parar a partida da centrífuga e informar a instrumentação.</p><br/>
-<p>4 – Se o óleo não estiver no nível não partir a centrífuga.</p><br/>
-<p>5 – Caso a pressão estiver menor ou maior que 1,5 Kgf/cm2, verificar se a bomba do tanque de vinho a centrifugar está no automático, para regular a pressão na linha.</p><br/>
-<p>6 – Operador do COI deve reduzir a abertura da válvula de vinho. Caso a vibração não cesse, o equipamento deve ser parado imediatamente, utilizando o botão de segurança disponível no campo ao lado das centrifugas.</p><br/>
-<p>7 - Caso a perda de levedo no vinho seja maior 5% reduzir a vazão de vinho das centrífugas. Caso a perda não seja reduzida na próxima análise, parar a centrífuga e substituir suas boquilhas por um tamanho menor.</p><br/>
-<p>8 - Caso a concentração for menor que 60%, aumentar a vazão de vinho para as centrífugas. Caso a perda não seja reduzida na próxima análise, parar a centrífuga e substituir suas boquilhas por um tamanho menor.</p><br/>
-<p>ASPECTOS SSMAQ</p><br/>
-<p>8.1 ASPECTOS DE SEGURANÇA DO TRABALHO</p><br/>
-<p>Perigos e Riscos da Atividade</p><br/>
-<p>1- Para detalhes dos riscos existentes nas atividades, consulte as Análises de Perigos e Riscos (APR’s):</p><br/>
-<p>- APR.32.VE.002 - Lavagem Centrifuga de Levedo 1,2, 3 e 4;</p><br/>
-<p>- APR.32.VE.004 - Processo Operacional do Etanol.</p><br/>
-<p>2- Em caso de intervenção em máquina/equipamento, verificar se há necessidade da emissão da Permissão de Trabalho PT (IT.13.VE.008) e Análise de Perigos e Riscos (IT 13.VE.009);</p><br/>
-<p>3- Os Perigos/Riscos e as medidas de controle descritos nas APR’s que estão disponíveis no setor não esgotam os cuidados a serem seguidos, sendo que qualquer trabalho deve atender aos requisitos das Normas Regulamentadoras do MTE, Instruções de Trabalho, Procedimentos, Diretrizes e outros Requisitos Legais e Internos.</p><br/>
-<p>8.2 ASPECTOS DE MEIO AMBIENTE</p><br/>
-<p>8.2.1 Aspectos de Meio Ambiente</p><br/>
-<p>As informações referentes aos Aspectos e Impactos Ambientais e seus controles operacionais estão disponíveis para consulta através da Planilha GAIA (Gerenciamento de Aspectos e Impactos Ambientais), e podem ser consultadas nos setores de forma eletrônica ou física.</p><br/>
-<p>8.3 ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</p><br/>
-<p>- Durante a execução deste procedimento devem ser seguidos os requisitos do Programa 8S e BPF.</p><br/>
-<p>- A área deve ser mantida limpa e organizada.</p><br/>
-<p>REFERÊNCIAS NORMATIVAS</p><br/>
-<p>NR 01 - Disposições Gerais (www.mte.gov.br)</p><br/>
+<header>
+    <h1>IT.32.VE.015 - Partida e Parada das Centrífugas de Vinho</h1>
+    <p class="subtitle">Instrução de Trabalho Completa</p>
+</header>
+
+<h2><span class="underline">1. OBJETIVO</span></h2>
+<p>Alcançar a estabilidade dos parâmetros de processo das centrífugas de vinho em até 12 minutos. Parar as centrífugas de vinho em até 10 minutos.</p>
+
+<h2><span class="underline">2. ABRANGÊNCIA</span></h2>
+<p>Esta instrução de trabalho aplica-se a Destilaria da unidade industrial Vertente.</p>
+
+<h2><span class="underline">3. CONCEITOS</span></h2>
+<h3><span class="underline">3.1. SIGLAS E ABREVIATURA</span></h3>
+<p>APR - Análise Preliminar de Risco</p>
+<p>BPF - Boas Práticas de Fabricação</p>
+<p>COI - Centro Operacional Integrado</p>
+<p>EPI - Equipamentos de Proteção Individual</p>
+<p>GAIA – Gerenciamento de Aspectos e Impactos Ambientais</p>
+<p>IT – Instrução de Trabalho</p>
+<p>MTE – Ministério do Trabalho e Emprego</p>
+<p>NR - Normas Regulamentadoras</p>
+<p>SSMAQ - Saúde, Segurança, Meio Ambiente e Qualidade</p>
+<p>8S - Programa 8S</p>
+
+<h3><span class="underline">3.2. DEFINIÇÕES</span></h3>
+<p><strong>Variáveis de Controle:</strong> refere-se a variável que pode ser controlada na etapa do processo aonde a sua medição é efetuada e impacta na qualidade do processo e/ou do produto.</p>
+<p><strong>Variável de Monitoramento:</strong> refere-se a variável que não pode ser controlada na etapa de processo aonde a sua medição é efetuada e não impacta na qualidade do processo e/ou do produto.</p>
+
+<h2><span class="underline">4. DOCUMENTOS ASSOCIADOS</span></h2>
+<p>IT.13.VE.008 - Permissão de Trabalho - PT</p>
+<p>IT 13.VE.009 - Análise de Perigos e Riscos</p>
+<p>FO.32.VE.005 - Limpeza de Equipamento da Fermentação</p>
+<p>FO.32.VE.010 - Acompanhamento de Boquilhas das Centrífugas</p>
+<p>Variável de Perda de Levedo no Vinho (GAtec) – 958, 959, 960, 961 e 6175</p>
+<p>Variável de Concentração de Levedo (GAtec) – 71779, 71784, 71789, 71814 e 71819</p>
+
+<h2><span class="underline">5. RESPONSABILIDADES</span></h2>
+<h3><span class="underline">5.1. OPERADOR DA DESTILARIA – COI</span></h3>
+<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer.</p>
+<h3><span class="underline">5.2. OPERADOR DA DESTILARIA – CAMPO</span></h3>
+<p>Realizar verificação das manobras do operador do COI quando solicitado e seguir requisitos deste procedimento.</p>
+
+<h2><span class="underline">6. CRITÉRIOS</span></h2>
+<ul>
+    <li>As operações deverão ter início, após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</li>
+    <li>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</li>
+    <li>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</li>
+    <li>Atendimento as normas de uso de EPI's (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</li>
+    <li>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</li>
+    <li>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</li>
+    <li>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</li>
+</ul>
+
+<h2><span class="underline">7. PROCEDIMENTOS</span></h2>
+<p>Analisar as condições de vazão de vinho para a destilaria.</p>
+<p>De acordo com a tabela abaixo, iniciar a partida ou parada das centrífugas de vinho levando em consideração a vazão de vinho para a Destilaria.</p>
+<table>
+    <thead>
+        <tr><th>Centrífuga em Operação</th><th>Vazão de Vinho para Destilaria</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>1 Centrífuga Pequena</td><td>70 m³/h</td></tr>
+        <tr><td>2 Centrífugas Pequenas</td><td>140 m³/h</td></tr>
+        <tr><td>3 Centrífugas Pequenas</td><td>210 m³/h</td></tr>
+        <tr><td>1 Centrífuga Grande</td><td>110 m³/h</td></tr>
+        <tr><td>2 Centrífugas Grandes</td><td>220 m³/h</td></tr>
+        <tr><td>1 Centrífuga Pequena e 1 Centrífuga Grande</td><td>180 m³/h</td></tr>
+        <tr><td>1 Centrífuga Pequena e 2 Centrífugas Grandes</td><td>290 m³/h</td></tr>
+        <tr><td>2 Centrífugas Pequenas e 1 Centrífuga Grande</td><td>250 m³/h</td></tr>
+        <tr><td>2 Centrífugas Pequenas e 2 Centrífugas Grandes</td><td>360 m³/h</td></tr>
+        <tr><td>3 Centrífugas Pequenas e 1 Centrífuga Grande</td><td>320 m³/h</td></tr>
+        <tr><td>3 Centrífugas Pequenas e 2 Centrífugas Grandes</td><td>430 m³/h</td></tr>
+    </tbody>
+</table>
+
+<h3><span class="underline">7.1. PARTIDA CENTRÍFUGA DE VINHO</span></h3>
+<ol class="procedure-list">
+    <li>O operador de campo deve vestir o EPI apropriado: uniforme, capacete com jugular, óculos de proteção, protetor auricular e calçado de segurança.</li>
+    <li>O operador de COI deve:
+        <ol>
+            <li>Informar ao operador de campo que irá partir a centrífuga.¹</li>
+            <li>Anotar no relatório de turno o horário de partida da centrífuga.</li>
+            <li>Verificar o nível do tanque de vinho a centrifugar, que deve estar maior que 12%.²</li>
+        </ol>
+    </li>
+    <li>Solicitar ao operador do campo para confirmar se as válvulas e drenos do filtro de vinho centrifugado estão fechadas.³</li>
+    <li>Solicitar ao operador de campo para abrir válvula de entrada e saída do filtro de vinho. Aguardar confirmação.</li>
+    <li>Solicitar ao operador de campo que confirme se o nível do óleo da centrífuga de vinho está normal.⁴</li>
+    <li>Abrir válvula de entrada de água em 35% da centrífuga de vinho.</li>
+    <li>Solicitar ao operador de campo que confirme a saída da água no duto de fermento. Aguardar confirmação.</li>
+    <li>Solicitar ao operador de campo que abra as válvulas de água de resfriamento de óleo da centrífuga de vinho. Aguardar confirmação.</li>
+    <li>Ligar o rotor da centrífuga de vinho selecionada para execução.</li>
+    <li>Solicitar ao operador do campo o acompanhamento o filtro até que encha e solicitar o fechamento total da válvula quebra-vácuo.</li>
+    <li>Após 8 minutos da centrífuga em rotação, abrir em 25% a válvula de entrada de vinho da centrífuga.</li>
+    <li>Solicitar ao operador de campo que confirme se as válvulas de sucção e recalque do tanque de vinho a centrifugar estão 100% abertas.</li>
+    <li>Ligar a bomba do tanque de vinho a centrifugar.</li>
+    <li>Aguardar até a pressão de vinho na linha chegue em 1,5 Kgf/cm².⁵</li>
+    <li>Solicitar ao operador de campo que confirme a saída de vinho no duto de fermento. Aguardar confirmação.</li>
+    <li>Fechar a válvula de entrada de água da centrífuga de vinho.</li>
+    <li>Caso o operador do campo verifique vibração anormal do equipamento, informar o operador do COI.⁶</li>
+    <li>Solicitar ao operador de campo, que monitore a concentração de fermento e a perda no vinho, para regular a abertura da válvula de entrada de vinho da centrífuga.⁷,⁸</li>
+    <li>De acordo com as análises do laboratório de concentração e perda de levedo no vinho, conforme variáveis do GAtec 71779, 71784, 71789, 71814 e 71819 e 958, 959, 960, 961 e 6175, ajustar a válvula de entrada de vinho.⁷,⁸</li>
+</ol>
+
+<h3><span class="underline">7.2. PARADA</span></h3>
+<ol class="procedure-list" style="list-style-type: lower-alpha;">
+    <li>Informar o operador de campo que irá parar uma centrífuga.</li>
+    <li>Reduzir a carga do vinho que estiver no momento pela metade.</li>
+    <li>Abrir válvula de água da centrífuga em 50%.</li>
+    <li>Solicitar ao operador de campo que confirme a saída de água no duto de fermento. Aguardar confirmação.</li>
+    <li>Fechar válvula de vinho da centrífuga.</li>
+    <li>Desligar o rotor da centrífuga de vinho.</li>
+    <li>Solicitar ao operador de campo para acionar o freio da centrífuga de vinho.</li>
+    <li>Após a centrífuga de vinho estar parada, fechar a válvula de água da centrífuga.</li>
+    <li>Anotar no relatório de turno o horário da parada da centrífuga.</li>
+</ol>
+
+<h3><span class="underline">7.3 AÇÕES EM CASO DE ANOMALIA</span></h3>
+<ol>
+    <li>¹ Caso tenha alterado o tamanho das boquilhas, anotar no FO.32.VE.010 - Acompanhamento de Boquilhas das Centrífugas.</li>
+    <li>² Se o nível estiver menor que 12% não partir a centrifugação. Informar o líder que não há vinho bruto suficiente.</li>
+    <li>³ Caso a indicação da válvula de drenos esteja diferente da situação no campo deve-se parar a partida da centrífuga e informar a instrumentação.</li>
+    <li>⁴ Se o óleo não estiver no nível não partir a centrífuga.</li>
+    <li>⁵ Caso a pressão estiver menor ou maior que 1,5 Kgf/cm², verificar se a bomba do tanque de vinho a centrifugar está no automático, para regular a pressão na linha.</li>
+    <li>⁶ Operador do COI deve reduzir a abertura da válvula de vinho. Caso a vibração não cesse, o equipamento deve ser parado imediatamente, utilizando o botão de segurança disponível no campo ao lado das centrífugas.</li>
+    <li>⁷ Caso a perda de levedo no vinho seja maior 5% reduzir a vazão de vinho das centrífugas. Caso a perda não seja reduzida na próxima análise, parar a centrífuga e substituir suas boquilhas por um tamanho menor.</li>
+    <li>⁸ Caso a concentração for menor que 60%, aumentar a vazão de vinho para as centrífugas. Caso a perda não seja reduzida na próxima análise, parar a centrífuga e substituir suas boquilhas por um tamanho menor.</li>
+</ol>
+
+<h2><span class="underline">8. ASPECTOS SSMAQ</span></h2>
+<h3><span class="underline">8.1 ASPECTOS DE SEGURANÇA DO TRABALHO</span></h3>
+<h4>8.1.1 Perigos e Riscos da Atividade</h4>
+<p>1- Para detalhes dos riscos existentes nas atividades, consulte as Análises de Perigos e Riscos (APR's):</p>
+<ul>
+    <li>APR.32.VE.002 - Lavagem Centrifuga de Levedo 1,2, 3 e 4;</li>
+    <li>APR.32.VE.004 - Processo Operacional do Etanol.</li>
+</ul>
+<p>2- Em caso de intervenção em máquina/equipamento, verificar se há necessidade da emissão da Permissão de Trabalho PT (IT.13.VE.008) e Análise de Perigos e Riscos (IT 13.VE.009);</p>
+<p>3- Os Perigos/Riscos e as medidas de controle descritos nas APR’s que estão disponíveis no setor não esgotam os cuidados a serem seguidos, sendo que qualquer trabalho deve atender aos requisitos das Normas Regulamentadoras do MTE, Instruções de Trabalho, Procedimentos, Diretrizes e outros Requisitos Legais e Internos.</p>
+
+<h2><span class="underline">Tabela de Perigos e Riscos</span></h2>
+<table>
+    <thead>
+        <tr>
+            <th>Item do documento / Tarefa</th>
+            <th>Símbolo</th>
+            <th>Perigos</th>
+            <th>Riscos</th>
+            <th>Medida de controle</th>
+            <th>Equipamento de proteção individual (EPI)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>7.1.1 a 7.1.11 - Preparação e partida da centrífuga.</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada, comunicação, verificação de painéis e válvulas.</td>
+            <td>Treinamento NR-17, Ginástica Laboral, DDS, Laudo ergonômico.</td>
+            <td rowspan="4">
+                - Uniforme<br>
+                - Capacete com jugular<br>
+                - Óculos de proteção<br>
+                - Protetor auricular<br>
+                - Calçado de segurança
+            </td>
+        </tr>
+        <tr>
+            <td>7.1.12 a 7.1.18 - Operação da bomba e centrífuga.</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Exposição ao ruído de máquinas e equipamentos.</td>
+            <td>Treinamentos de PCA, Exame Admissional e Periódico, Uso de EPI.</td>
+        </tr>
+        <tr>
+            <td>7.1.20 - Verificação de vibração anormal.</td>
+            <td><i class="fa-solid fa-triangle-exclamation icon"></i></td>
+            <td class="estrutural">Vibração / Ruptura</td>
+            <td>Falha mecânica, projeção de partes, danos estruturais.</td>
+            <td>Manutenção preventiva, inspeção periódica, procedimento de parada de emergência.</td>
+        </tr>
+        <tr>
+            <td>7.1.21 e 7.1.22 - Monitoramento de fermento e perda no vinho.</td>
+            <td><i class="fa-solid fa-flask-vial icon"></i></td>
+            <td class="quimico">Produto Químico/Biológico</td>
+            <td>Contato com levedo/vinho, manuseio de amostras.</td>
+            <td>Uso de EPI, FISPQ, boas práticas de laboratório.</td>
+        </tr>
+        <tr>
+            <td>7.2 - Parada da Centrífuga</td>
+            <td><i class="fa-solid fa-power-off icon"></i></td>
+            <td class="operacional">Procedimento Operacional</td>
+            <td>Parada inadequada, manuseio de freio e válvulas.</td>
+            <td>Seguir rigorosamente o procedimento, comunicação clara, checklist de parada.</td>
+            <td>
+                - Uniforme<br>
+                - Capacete com jugular<br>
+                - Óculos de proteção<br>
+                - Protetor auricular<br>
+                - Calçado de segurança
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3><span class="underline">8.2 ASPECTOS DE MEIO AMBIENTE</span></h3>
+<h4>8.2.1 Aspectos de Meio Ambiente</h4>
+<p>As informações referentes aos Aspectos e Impactos Ambientais e seus controles operacionais estão disponíveis para consulta através da Planilha GAIA (Gerenciamento de Aspectos e Impactos Ambientais), e podem ser consultadas nos setores de forma eletrônica ou física.</p>
+
+<h3><span class="underline">8.3 ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</span></h3>
+<p>- Durante a execução deste procedimento devem ser seguidos os requisitos do Programa 8S e BPF.</p>
+<p>- A área deve ser mantida limpa e organizada.</p>
+
+<h2><span class="underline">9. REFERÊNCIAS NORMATIVAS</span></h2>
+<p>NR 01 - Disposições Gerais (www.mte.gov.br)</p>
 <p>NR 06 - Equipamentos de Proteção Individual – EPI (www.mte.gov.br)</p>
+
+<footer>
+    <p>Data: 09/07/2020 – Revisão: 1</p>
+</footer>
 </body>
 </html>
