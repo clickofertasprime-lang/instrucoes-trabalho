@@ -52,7 +52,7 @@
             border-bottom: 2px solid #eee;
         }
         .overview h2 {
-            color: #333; 
+            color: #333;
             font-size: 1.4em;
             margin-top: 0;
             margin-bottom: 10px;
@@ -72,29 +72,39 @@
             margin-bottom: 20px;
         }
         
-        /* --- Lupa de Pesquisa --- */
-        .search-wrapper {
-            position: relative;
+        /* --- Área de Filtros --- */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
             margin-bottom: 20px;
         }
-        .search-wrapper .fa-search {
+        .filters .search-wrapper {
+            position: relative;
+            flex-grow: 1;
+        }
+         .filters .fa-search {
             position: absolute;
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
             color: #999;
-            z-index: 2;
         }
-        #itSearchInput {
-            width: 100%;
-            padding: 12px 15px 12px 45px;
+        .filters select, 
+        .filters input {
+            padding: 12px;
             font-size: 1em;
             border: 1px solid #ddd;
             border-radius: 8px;
-            box-sizing: border-box; 
+            box-sizing: border-box;
             transition: border-color 0.2s, box-shadow 0.2s;
+            width: 100%;
         }
-        #itSearchInput:focus {
+        #itSearchInput {
+             padding-left: 45px;
+        }
+        .filters input:focus, 
+        .filters select:focus {
             outline: none;
             border-color: #0056b3;
             box-shadow: 0 0 5px rgba(0,86,179,0.3);
@@ -104,7 +114,7 @@
         .it-counter {
             font-size: 0.9em;
             color: #666;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
         
         ul.it-list {
@@ -114,7 +124,7 @@
         }
         
         ul.it-list li {
-            display: flex; 
+            display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 12px;
@@ -150,7 +160,7 @@
             transition: background-color 0.2s ease;
         }
         ul.it-list li a:hover { 
-            background: #004a9a; 
+            background: #004a9a;
         }
 
         /* --- Caixa de Informações --- */
@@ -191,6 +201,9 @@
         
         /* --- Responsividade --- */
          @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
             .container {
                 margin: 15px;
                 padding: 20px;
@@ -233,53 +246,62 @@
 
         <h2 class="list-title">Instruções Disponíveis</h2>
         
-        <div class="search-wrapper">
-            <i class="fas fa-search"></i>
-            <input type="text" id="itSearchInput" placeholder="Pesquisar pelo nome ou código da IT...">
+        <div class="filters">
+            <div class="search-wrapper">
+                 <i class="fas fa-search"></i>
+                <input type="text" id="itSearchInput" placeholder="Pesquisar pelo nome ou código da IT...">
+            </div>
+            <select id="categoryFilter">
+                <option value="todas">Todas as Categorias</option>
+                <option value="Segurança">Segurança</option>
+                <option value="Operação">Operação</option>
+                <option value="Manutenção">Manutenção</option>
+                <option value="Limpeza">Limpeza</option>
+            </select>
         </div>
         
+        <div id="itCounter" class="it-counter"></div>
+        
         <ul class="it-list" id="itList">
-            <li><h3>IT.32.VE.002.2 - Descarregamento de Ácido Sulfúrico 98%</h3><a href="IT.32.VE.002.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.004.2 - Fervura de Soda - Aparelho 1</h3><a href="IT.32.VE.004.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.007.1 - Processo Operacional – Desidratação Etanol Hidratado</h3><a href="IT.32.VE.007.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.011.3 - Partida da Destilação do Vinho – Aparelho 2</h3><a href="IT.32.VE.011.3.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.013.4 - Partida da Destilação do Vinho – Aparelho 1</h3><a href="IT.32.VE.013.4.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.014.2 - Partida e Parada Fermentação</h3><a href="IT.32.VE.014.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.015.1 - Partida e Parada das Centrífugas de Vinho</h3><a href="IT.32.VE.015.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.016.1 - Dosagem de Antibióticos</h3><a href="IT.32.VE.016.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.017.0 - Remoção de Impureza das Dornas</h3><a href="IT.32.VE.017.0.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.018.1 - Multiplicação de Levedo</h3><a href="IT.32.VE.018.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.019.3 - Desmontagem e Limpeza das Centrífugas de Vinho</h3><a href="IT.32.VE.019.3 (2).html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.020.1 - Partida e Parada Coluna de CO2</h3><a href="IT.32.VE.020.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.021.3 - Inversão do Anel de Alimentação</h3><a href="IT.32.VE.021.3.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.022.1 - Operação de Limpeza dos Trocadores de Calor a Placas</h3><a href="IT.32.VE.022.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.024.1 - Operação Preparo de Soda Líquida Aparelho de Destilação 2</h3><a href="IT.32.VE.024.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.025.2 - Virada de Tanque Hidratado</h3><a href="IT.32.VE.025.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.028.1 - Partida do Aparelho Anidro</h3><a href="IT.32.VE.028.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.029.1 - Parada do Aparelho Anidro</h3><a href="IT.32.VE.029.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.031.1 - Retirada de Óleo Fúsel das Tomadas das Bandejas</h3><a href="IT.32.VE.031.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.032.3 - Lavagem de Óleo Fúsel</h3><a href="IT.32.VE.032.3.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.033.1 - Operação Preparo de Soda Líquida Aparelho de Destilação 1</h3><a href="IT.32.VE.033.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.034.1 - Fervura de Soda - Aparelho 2</h3><a href="IT.32.VE.034.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.035.1 - Operação das Torres de Resfriamento Fermentação</h3><a href="IT.32.VE.035.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.036.1 - Desentupimento fundo de Dorna</h3><a href="IT.32.VE.036.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.037.2 - Virada de Tanque Anidro</h3><a href="IT.32.VE.037.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.038.1 - Correção do Grau Alcoólico do Etanol</h3><a href="IT.32.VE.038.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.039.1 - Assepsia dos Tanques de Caldo e Mel</h3><a href="IT.32.VE.039.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.040.1 - Carregamento de Levedo via Tanque de CIP</h3><a href="IT.32.VE.040.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.041.2 - Recuperação da Flegma via Tanque CIP</h3><a href="IT.32.VE.041.2.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.042.1 - Carregamento de Óleo Fúsel</h3><a href="IT.32.VE.042.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.043.1 - Inertização da Linha de Ácido Sulfúrico</h3><a href="IT.32.VE.043.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.048.0 - Assepsia Inicial da Fermentação</h3><a href="IT.32.VE.048.0 - Assepsia Inicial ....html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.049.1 - Retirar Válvulas</h3><a href="IT.32.VE.049.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.050.0 - Manutenção em Válvulas Borboleta</h3><a href="IT.32.VE.050.0.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.051.0 - Instalar Válvulas Borboletas</h3><a href="IT.32.VE.051.0.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.052.1 - Manutenção em Caixa Redutora Válvula</h3><a href="IT.32.VE.052.1.html" target="_blank">Visualizar</a></li>
-            <li><h3>IT.32.VE.054 - Assepsia Dornas</h3><a href="IT.32.VE.054.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Segurança"><h3>IT.32.VE.002.2 - Descarregamento de Ácido Sulfúrico 98%</h3><a href="IT.32.VE.002.2.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.004.2 - Fervura de Soda - Aparelho 1</h3><a href="IT.32.VE.004.2.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.007.1 - Processo Operacional – Desidratação Etanol Hidratado</h3><a href="IT.32.VE.007.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.011.3 - Partida da Destilação do Vinho – Aparelho 2</h3><a href="IT.32.VE.011.3.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.013.4 - Partida da Destilação do Vinho – Aparelho 1</h3><a href="IT.32.VE.013.4.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.014.2 - Partida e Parada Fermentação</h3><a href="IT.32.VE.014.2.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.015.1 - Partida e Parada das Centrífugas de Vinho</h3><a href="IT.32.VE.015.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.016.1 - Dosagem de Antibióticos</h3><a href="IT.32.VE.016.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.017.0 - Remoção de Impureza das Dornas</h3><a href="IT.32.VE.017.0.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.018.1 - Multiplicação de Levedo</h3><a href="IT.32.VE.018.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Limpeza"><h3>IT.32.VE.019.3 - Desmontagem e Limpeza das Centrífugas de Vinho</h3><a href="IT.32.VE.019.3 (2).html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.020.1 - Partida e Parada Coluna de CO2</h3><a href="IT.32.VE.020.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.021.3 - Inversão do Anel de Alimentação</h3><a href="IT.32.VE.021.3.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Limpeza"><h3>IT.32.VE.022.1 - Operação de Limpeza dos Trocadores de Calor a Placas</h3><a href="IT.32.VE.022.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.024.1 - Operação Preparo de Soda Líquida Aparelho de Destilação 2</h3><a href="IT.32.VE.024.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.025.2 - Virada de Tanque Hidratado</h3><a href="IT.32.VE.025.2.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.028.1 - Partida do Aparelho Anidro</h3><a href="IT.32.VE.028.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.029.1 - Parada do Aparelho Anidro</h3><a href="IT.32.VE.029.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.031.1 - Retirada de Óleo Fúsel das Tomadas das Bandejas</h3><a href="IT.32.VE.031.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.032.3 - Lavagem de Óleo Fúsel</h3><a href="IT.32.VE.032.3.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.033.1 - Operação Preparo de Soda Líquida Aparelho de Destilação 1</h3><a href="IT.32.VE.033.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.034.1 - Fervura de Soda - Aparelho 2</h3><a href="IT.32.VE.034.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.035.1 - Operação das Torres de Resfriamento Fermentação</h3><a href="IT.32.VE.035.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Manutenção"><h3>IT.32.VE.036.1 - Desentupimento fundo de Dorna</h3><a href="IT.32.VE.036.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.037.2 - Virada de Tanque Anidro</h3><a href="IT.32.VE.037.2.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.038.1 - Correção do Grau Alcoólico do Etanol</h3><a href="IT.32.VE.038.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Limpeza"><h3>IT.32.VE.039.1 - Assepsia dos Tanques de Caldo e Mel</h3><a href="IT.32.VE.039.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.040.1 - Carregamento de Levedo via Tanque de CIP</h3><a href="IT.32.VE.040.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.041.2 - Recuperação da Flegma via Tanque CIP</h3><a href="IT.32.VE.041.2.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Operação"><h3>IT.32.VE.042.1 - Carregamento de Óleo Fúsel</h3><a href="IT.32.VE.042.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Segurança"><h3>IT.32.VE.043.1 - Inertização da Linha de Ácido Sulfúrico</h3><a href="IT.32.VE.043.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Limpeza"><h3>IT.32.VE.048.0 - Assepsia Inicial da Fermentação</h3><a href="IT.32.VE.048.0 - Assepsia Inicial ....html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Manutenção"><h3>IT.32.VE.049.1 - Retirar Válvulas</h3><a href="IT.32.VE.049.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Manutenção"><h3>IT.32.VE.050.0 - Manutenção em Válvulas Borboleta</h3><a href="IT.32.VE.050.0.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Manutenção"><h3>IT.32.VE.051.0 - Instalar Válvulas Borboletas</h3><a href="IT.32.VE.051.0.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Manutenção"><h3>IT.32.VE.052.1 - Manutenção em Caixa Redutora Válvula</h3><a href="IT.32.VE.052.1.html" target="_blank">Visualizar</a></li>
+            <li class="it-card" data-category="Limpeza"><h3>IT.32.VE.054 - Assepsia Dornas</h3><a href="IT.32.VE.054.html" target="_blank">Visualizar</a></li>
         </ul>
         
-        <div id="itCounter" class="it-counter"></div>
-
         <section class="info-box">
             <span class="info-icon"><i class="fas fa-info-circle"></i></span>
             <div class="info-content">
@@ -295,49 +317,42 @@
     </footer>
     
     <script>
-        // Script do ano (existente)
         document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-    
-    <script>
-        // Como este script está no fim do <body>, não precisamos do "DOMContentLoaded".
-        // Os elementos abaixo já existem.
-        
-        // 1. Seleciona os elementos
-        const searchInput = document.getElementById("itSearchInput");
-        const itList = document.getElementById("itList");
-        const listItems = itList.querySelectorAll("li"); 
-        const counterElement = document.getElementById("itCounter");
-        const totalCount = listItems.length;
 
-        // 2. Função para filtrar a lista
+        const searchInput = document.getElementById("itSearchInput");
+        const categoryFilter = document.getElementById("categoryFilter");
+        const itCards = document.querySelectorAll(".it-card");
+        const counterElement = document.getElementById("itCounter");
+        const totalCount = itCards.length;
+
         function filterList() {
             const searchTerm = searchInput.value.toLowerCase();
+            const selectedCategory = categoryFilter.value;
             let visibleCount = 0;
 
-            for (let i = 0; i < listItems.length; i++) {
-                const item = listItems[i];
-                const itemText = item.getElementsByTagName("h3")[0].textContent.toLowerCase();
-                
-                if (itemText.includes(searchTerm)) {
-                    // CORREÇÃO: Apenas remove o "display: none" e deixa o CSS
-                    // (stylesheet) cuidar de mostrar o item.
-                    item.style.display = ""; 
+            itCards.forEach(item => {
+                const text = item.querySelector("h3").textContent.toLowerCase();
+                const category = item.getAttribute("data-category");
+
+                const matchText = text.includes(searchTerm);
+                const matchCategory = (selectedCategory === "todas" || category === selectedCategory);
+
+                if (matchText && matchCategory) {
+                    item.style.display = ""; // Usa o display padrão do CSS (flex)
                     visibleCount++;
                 } else {
                     item.style.display = "none";
                 }
-            }
+            });
             
-            // 3. Atualiza o contador
             counterElement.textContent = "Exibindo " + visibleCount + " de " + totalCount + " ITs.";
         }
 
-        // 4. Adiciona o 'escutador' de eventos
         searchInput.addEventListener("input", filterList);
-        
-        // 5. Chama a função no início para definir o contador inicial
-        filterList(); 
+        categoryFilter.addEventListener("change", filterList);
+
+        // Chama a função no início para definir o contador inicial
+        filterList();
     </script>
 
 </body>
