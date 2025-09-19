@@ -1,64 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>IT.32.VE.014.2 – Partida e Parada Fermentação</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9fafc; color: #222; }
-    header { text-align: center; padding: 20px; margin-bottom: 30px; border-bottom: 4px solid #003366; background: #e6eef7; border-radius: 8px; }
-    h1 { color: #003366; margin: 0; }
-    h2 { color: #005599; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
-    ul { margin: 10px 0 10px 20px; }
-    p { margin: 8px 0; white-space: pre-wrap; }
-    table { width: 100%; border-collapse: collapse; margin: 30px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; vertical-align: top; }
-    th { background-color: #003366; color: white; font-weight: bold; position: sticky; top: 0; z-index: 2; }
-    td.quimico { background-color: #ffe5d9; }
-    td.altura { background-color: #fde2e2; }
-    td.equipamento { background-color: #fff3cd; }
-    td.ferramenta { background-color: #e2f0d9; }
-    td.ergonomia { background-color: #e6e6fa; }
-    td.ruido { background-color: #f0f0f0; }
-    td.superficie { background-color: #ffe0b2; }
-    td.integridade { background-color: #d1c4e9; }
-    tr:nth-child(even) { background-color: #f7f9fc; }
-    tr:hover { background-color: #e8f0fe; }
-    .icon { font-size: 1.1em; margin-right: 6px; }
-    footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #555; }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT.32.VE.014 - Partida e Parada Fermentação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f9fafc;
+            color: #222;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #003366;
+            background: #e6eef7;
+            border-radius: 8px;
+        }
+        
+        h1 { color: #003366; margin: 0; }
+        h2 { color: #005599; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        h3 { color: #0077aa; margin-top: 25px; }
+        p { margin: 10px 0; }
+        ul, ol { margin: 10px 0; padding-left: 20px; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        th {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+            /* --- MELHORIA APLICADA: CABEÇALHO FIXO --- */
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        
+        .underline { text-decoration: underline; }
+        .procedure-list { list-style-type: lower-alpha; padding-left: 25px; }
+        .procedure-list li { margin-bottom: 8px; }
+        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #555; }
+        .icon { font-size: 1.1em; margin-right: 6px; }
+        
+        /* Cores por tipo de perigo */
+        td.quimico { background-color: #ffe5d9; }
+        td.ergonomia { background-color: #e2f0d9; }
+        td.ruido { background-color: #fff3cd; }
+        td.estrutural { background-color: #fde2e2; }
+        td.ferramenta { background-color: #e8f0fe; }
+        td.altura { background-color: #e6e6fa; }
+        td.pressurizado { background-color: #f0fff0; }
+        td.quente { background-color: #fff0f5; }
+        td.explosivo { background-color: #fffacd; }
+        td.incendio { background-color: #ffebcd; }
+        td.combustivel { background-color: #f5f5dc; }
+        
+        tr:nth-child(even) { background-color: #f7f9fc; }
+        tr:hover { background-color: #f0f7ff; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 <header>
-  <h1>IT.32.VE.014.2</h1>
-  <p class="subtitle">Partida e Parada Fermentação</p>
+    <h1>IT.32.VE.014 - Partida e Parada Fermentação</h1>
+    <p class="subtitle">Instrução de Trabalho Completa</p>
 </header>
-<h2>Objetivo</h2>
-<p>Fermentar o mosto de forma que o brix na dorna seja inferior a 2,5ºB.</p>
-<h2>Abrangência</h2>
+
+<h2><span class="underline">Objetivo</span></h2>
+<p>Fermentar o mosto de forma que o brix na dorna seja inferior a 2,5°B.</p>
+
+<h2><span class="underline">Abrangência</span></h2>
 <p>Esta instrução de trabalho aplica-se a Destilaria da unidade industrial de Vertente.</p>
-<h2>Siglas</h2>
-<p>E ABREVIATURA</p>
+
+<h2><span class="underline">Conceitos</span></h2>
+<h3><span class="underline">SIGLAS E ABREVIATURAS</span></h3>
 <p>BPF – Boas Práticas de Fabricação</p>
-<p>EPI – Equipamento de Proteção Individual</p>
+<p>EPI - Equipamento de Proteção Individual</p>
 <p>FISPQ – Ficha de Informação de Segurança de Produtos Químicos</p>
-<p>FO – Formulário</p>
+<p>FO - Formulário</p>
 <p>GAIA – Gerenciamento de Aspectos e Impactos Ambientais</p>
-<p>IT – Instrução de Trabalho</p>
-<p>PB – Publicação</p>
-<p>VE – Vertente</p>
+<p>IT - Instrução de Trabalho</p>
+<p>PB - Publicação</p>
+<p>VE - Vertente</p>
 <p>NR – Norma Regulamentadora</p>
-<p>PT – Permissão de Trabalho</p>
+<p>PT - Permissão de Trabalho</p>
 <p>SSMAQ – Saúde, Segurança, Meio Ambiente e Qualidade</p>
-<p>8S – Programa de Limpeza e Organização</p>
+<p>8S - Programa de Limpeza e Organização</p>
 <p>PCA – Programa de Conservação Auditiva</p>
 <p>PVC- Policloreto De Vinila</p>
-<p>GA – Gaia</p>
+<p>GA - Gaia</p>
 <p>NA – Não Aplicável</p>
-<h2>Definições</h2>
-<p>N/A.</p>
-<h2>Documentos Associados</h2>
+
+<h3><span class="underline">DEFINIÇÕES</span></h3>
+<p>Não aplicável.</p>
+
+<h2><span class="underline">Documentos Associados</span></h2>
 <p>IT.13.VE.008 - Permissão de Trabalho PT</p>
 <p>IT 13.VE.009 - Análise de Perigos e Riscos</p>
 <p>FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS</p>
@@ -67,77 +119,175 @@
 <p>FISPQ do Ácido Sulfúrico</p>
 <p>GA.02.010 - Planilha GAIA- Indústria - Processos Industriais</p>
 <p>GA.02.004 - Planilha GAIA- Indústria - Áreas Comuns</p>
-<h2>Responsabilidades</h2>
-<p>OPERADOR DA FERMENTAÇÃO – COI</p>
-<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer.</p>
-<p>Realizar a verificação das manobras executadas pelo operador do COI quando solicitado e realizar         manobras em válvulas manuais.</p>
-<p>OPERADOR DA FERMENTAÇÃO – CAMPO</p>
+
+<h2><span class="underline">Responsabilidades</span></h2>
+<h3><span class="underline">OPERADOR DA FERMENTAÇÃO – COI</span></h3>
+<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer. Realizar a verificação das manobras executadas pelo operador do COI quando solicitado e realizar manobras em válvulas manuais.</p>
+<h3><span class="underline">OPERADOR DA FERMENTAÇÃO – CAMPO</span></h3>
 <p>Realizar a verificação das manobras executadas pelo operador do COI quando solicitado e realizar manobras em válvulas manuais.</p>
-<p>OPERADOR DA ETA</p>
+<h3><span class="underline">OPERADOR DA ETA</span></h3>
 <p>Ligar a bomba das torres da fermentação.</p>
-<p>GESTOR DA DESTILAR</p>
+<h3><span class="underline">GESTOR DA DESTILAR</span></h3>
 <p>Informar nível de trabalho da dorna.</p>
-<h2>Critérios</h2>
-<p>As operações deverão ter início, após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</p>
-<p>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</p>
-<p>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</p>
-<p>Atendimento as normas de uso de EPI’s (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</p>
-<p>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</p>
-<p>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</p>
-<p>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</p>
-<h2>Procedimentos</h2>
-<p>PARTIDA FERMENTAÇÃO</p>
-<p>O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.</p>
-<p>Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%</p>
-<p>Fechar válvula de esgotamento da dorna que irá alimentar.</p>
-<p>Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.</p>
-<p>Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.</p>
-<p>Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.</p>
-<p>Abrir válvula de fundo da cuba que será enviada para dorna 1.</p>
-<p>Ligar a bomba de fermento tratado para alimentação das dornas.</p>
-<p>Abrir válvula de entrada e saída de água no trocador de calor das dornas.</p>
-<p>Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.</p>
-<p>Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.</p>
-<p>Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.</p>
-<p>Abrir válvula de entrada e saída de vinho no trocador de calor.</p>
-<p>Abrir válvula de recirculação de vinho da dorna que será alimentada.</p>
-<p>Ligar bomba da dorna que será alimentada.</p>
-<p>Solicitar ao gestor da destilaria o nível de trabalho da dorna.2</p>
-<p>Abrir a válvula de alimentação da dorna, do anel selecionado.</p>
-<p>Ligar a bomba de mel e a bomba de caldo pré evaporado.</p>
-<p>Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.</p>
-<p>Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.</p>
-<p>Abrir válvula de água na coluna de lavagem de CO2 de acordo com o Brix do mosto usado na alimentação.</p>
-<p>Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.</p>
-<p>Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5ºB, iniciar centrifugação.</p>
-<p>PARADA</p>
-<p>Avisar ao líder e operador de campo que irá realizar a parada da dorna após terminar centrifugação.</p>
-<p>Abrir a válvula de esgotamento da dorna.</p>
-<p>Ligar a bomba da dorna para o tanque de vinho a centrifugar.</p>
-<p>Após esvaziar a dorna, desligar a bomba da dorna para o tanque de vinho a centrifugar.</p>
-<p>Fechar a válvula de esgotamento da dorna.</p>
-<p>Abrir a válvula de água de lavagem da dorna.</p>
-<p>Ligar a bomba de lavagem de dornas.</p>
-<p>Proceder a limpeza drenando para caixa de resíduo.</p>
-<p>PROCEDIMENTO DRENAGEM DA DORNA</p>
-<p>Abrir drenos Válvula 6” e 2.1/2” do Trocador de Calor da Dorna.</p>
-<p>Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.</p>
-<p>Bomba da caixa de resíduo liga pela chave boia.</p>
-<p>Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático.</p>
-<p>Fechar Válvula dreno 6” e 2.1/2” do Trocador de Calor da Dorna.</p>
-<p>Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</p>
-<p>Nota:  Caso os níveis dos tanques estejam abaixo de 20%, não partir a fermentação e informar o líder.</p>
-<p>Caso o gestor não esteja presente, solicitar informação ao líder.</p>
-<p>TABELA DE PERIGOS E RISCOS</p>
-<h2>Aspectos Ssmaq</h2>
-<p>ASPECTOS DE MEIO AMBIENTE</p>
+
+<h2><span class="underline">Critérios</span></h2>
+<ul>
+    <li>As operações deverão ter início, após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</li>
+    <li>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</li>
+    <li>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</li>
+    <li>Atendimento as normas de uso de EPI's (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</li>
+    <li>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</li>
+    <li>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</li>
+    <li>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</li>
+</ul>
+
+<h2><span class="underline">Procedimentos</span></h2>
+<h3><span class="underline">7.1 PARTIDA FERMENTAÇÃO</span></h3>
+<ol class="procedure-list">
+    <li>O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.</li>
+    <li>Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%</li>
+    <li>Fechar válvula de esgotamento da dorna que irá alimentar.</li>
+    <li>Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.</li>
+    <li>Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.</li>
+    <li>Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.</li>
+    <li>Abrir válvula de fundo da cuba que será enviada para dorna 1.</li>
+    <li>Ligar a bomba de fermento tratado para alimentação das dornas.</li>
+    <li>Abrir válvula de entrada e saída de água no trocador de calor das dornas.</li>
+    <li>Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.</li>
+    <li>Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.</li>
+    <li>Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.</li>
+    <li>Abrir válvula de entrada e saída de vinho no trocador de calor.</li>
+    <li>Abrir válvula de recirculação de vinho da dorna que será alimentada.</li>
+    <li>Ligar bomba da dorna que será alimentada.</li>
+    <li>Solicitar ao gestor da destilaria o nível de trabalho da dorna.</li>
+    <li>Abrir a válvula de alimentação da dorna, do anel selecionado.</li>
+    <li>Ligar a bomba de mel e a bomba de caldo pré evaporado.</li>
+    <li>Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.</li>
+    <li>Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.</li>
+    <li>Abrir válvula de água na coluna de lavagem de CO₂ de acordo com o Brix do mosto usado na alimentação.</li>
+    <li>Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.</li>
+    <li>Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5°B, iniciar centrifugação.</li>
+</ol>
+
+<h3><span class="underline">7.2 PARADA</span></h3>
+<ol class="procedure-list">
+    <li>Avisar ao líder e operador de campo que irá realizar a parada da dorna após terminar centrifugação.</li>
+    <li>Abrir a válvula de esgotamento da dorna.</li>
+    <li>Ligar a bomba da dorna para o tanque de vinho a centrifugar.</li>
+    <li>Após esvaziar a dorna, desligar a bomba da dorna para o tanque de vinho a centrifugar.</li>
+    <li>Fechar a válvula de esgotamento da dorna.</li>
+    <li>Abrir a válvula de água de lavagem da dorna.</li>
+    <li>Ligar a bomba de lavagem de dornas.</li>
+    <li>Proceder a limpeza drenando para caixa de resíduo.</li>
+</ol>
+
+<h3><span class="underline">7.3 PROCEDIMENTO DRENAGEM DA DORNA</span></h3>
+<ol class="procedure-list">
+    <li>Abrir drenos Válvula 6” e 2.1/2" do Trocador de Calor da Dorna.</li>
+    <li>Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.</li>
+    <li>Bomba da caixa de resíduo liga pela chave boia.</li>
+    <li>Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático.</li>
+    <li>Fechar Válvula dreno 6” e 2.1/2" do Trocador de Calor da Dorna.</li>
+    <li>Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</li>
+</ol>
+<p><strong>Nota:</strong> Caso os níveis dos tanques estejam abaixo de 20%, não partir a fermentação e informar o líder. Caso o gestor não esteja presente, solicitar informação ao líder.</p>
+
+<h2><span class="underline">Tabela de Perigos e Riscos</span></h2>
+<table>
+    <thead>
+        <tr>
+            <th>Item do documento / Tarefa</th>
+            <th>Símbolo</th>
+            <th>Perigos</th>
+            <th>Riscos</th>
+            <th>Medida de controle</th>
+            <th>Equipamento de proteção individual (EPI)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>7.1 a) a g) - Tarefas iniciais de partida da fermentação</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI; Subir e descer escada repetidamente; Abertura manual de Válvulas.</td>
+            <td>Treinamento transporte manual – NR-17; Ginástica laboral (FO.18.VE.025); Laudo ergonômico; Cadeiras com regulagem.</td>
+            <td rowspan="4">
+                - Capacete de segurança com jugular<br>
+                - Óculos de segurança com vedação<br>
+                - Calçado de segurança ante estático<br>
+                - Protetor auricular<br>
+                - Luva de vaqueta mista ou elastano
+            </td>
+        </tr>
+        <tr>
+            <td>7.1 a) a g) - Tarefas iniciais de partida da fermentação</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo.</td>
+            <td>Treinamentos de PCA; Exame Admissional e Periódico.</td>
+        </tr>
+        <tr>
+            <td>7.1 a) a g) - Tarefas iniciais de partida da fermentação</td>
+            <td><i class="fa-solid fa-triangle-exclamation icon"></i></td>
+            <td class="estrutural">Integridade estrutural</td>
+            <td>Estrutura piso da fermentação.</td>
+            <td>Inspeção visual das estruturas.</td>
+        </tr>
+        <tr>
+            <td>7.1 a) a g) - Tarefas iniciais de partida da fermentação</td>
+            <td><i class="fa-solid fa-hammer icon"></i></td>
+            <td class="ferramenta">Ferramentas Manuais</td>
+            <td>Aperto dos parafusos com chave manual.</td>
+            <td>Inspeção de ferramentas conforme FO.08.VE.005.</td>
+        </tr>
+        <tr>
+            <td>7.1 h) a p) - Alimentação das dornas</td>
+            <td><i class="fa-solid fa-building icon"></i></td>
+            <td class="altura">Trabalho em Altura</td>
+            <td>Queda de Pessoas.</td>
+            <td>Treinamento de Trabalho em altura; ASO apto para Trabalho em Altura.</td>
+            <td>- Cinto de Segurança;<br>- Talabarte Duplo Y;<br>- Capacete de segurança com jugular;<br>- Óculos de segurança;<br>- Calçado de segurança;<br>- Protetor Auricular.</td>
+        </tr>
+        <tr>
+            <td>7.1 q) a w) e 7.2 - Procedimentos de controle, parada e centrifugação</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI; Subir e descer escada repetidamente; Abertura manual de Válvulas.</td>
+            <td>Treinamento transporte manual – NR-17; Ginástica laboral (FO.18.VE.025); Laudo ergonômico; Cadeiras com regulagem.</td>
+            <td rowspan="3">
+                - Capacete de segurança com jugular<br>
+                - Óculos de segurança com vedação<br>
+                - Calçado de segurança ante estático<br>
+                - Protetor auricular<br>
+                - Luva de vaqueta mista ou elastano
+            </td>
+        </tr>
+        <tr>
+            <td>7.1 q) a w) e 7.2 - Procedimentos de controle, parada e centrifugação</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo.</td>
+            <td>Treinamentos de PCA; Exame Admissional e Periódico.</td>
+        </tr>
+        <tr>
+            <td>7.1 q) a w) e 7.2 - Procedimentos de controle, parada e centrifugação</td>
+            <td><i class="fa-solid fa-hammer icon"></i></td>
+            <td class="ferramenta">Ferramentas Manuais</td>
+            <td>Aperto dos parafusos com chave manual.</td>
+            <td>Inspeção de ferramentas conforme FO.08.VE.005.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2><span class="underline">Aspectos SSMAQ</span></h2>
+<h3><span class="underline">ASPECTOS DE MEIO AMBIENTE</span></h3>
 <p>As informações referentes aos Aspectos e Impactos Ambientais e seus controles operacionais estão disponíveis para consulta através da Planilha GAIA (Gerenciamento de Aspectos e Impactos Ambientais), e podem ser consultadas nos setores de forma eletrônica ou física.</p>
-<p>.  ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</p>
-<p>Durante a execução deste procedimento devem ser seguidos os requisitos do Programa 8S e BPF.</p>
-<p>A área deve ser mantida limpa e organizada.</p>
-<h2>Referências Normativas</h2>
+<h3><span class="underline">ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</span></h3>
+<p>Durante a execução deste procedimento devem ser seguidos os requisitos do Programa 8S e BPF. A área deve ser mantida limpa e organizada.</p>
+
+<h2><span class="underline">Referências Normativas</span></h2>
 <p>NR1 - Disposições Gerais</p>
-<p>NR6 - Inspeção Prévia</p>
+<p>NR6 - Equipamento de Proteção Individual – EPI</p>
 <p>NR8 - Edificações</p>
 <p>NR9 - Programas de Prevenção de Riscos Ambientais</p>
 <p>NR11 - Transporte, Movimentação, Armazenagem e Manuseio de Materiais</p>
@@ -149,296 +299,10 @@
 <p>NR26 - Sinalização de segurança</p>
 <p>NR33 - Segurança e saúde no trabalho em espaços confinados</p>
 <p>NR34 - Condições e meio ambiente de trabalho na indústria da construção, reparação e desmonte naval</p>
-<p>NR35 – Trabalho em Altura</p>
+<p>NR35 - Trabalho em Altura</p>
 
-<h2>Tabela de Perigos e Riscos</h2>
-<table>
-  <tr><th>Item do documento / Tarefa</th><th>Símbolo</th><th>Perigos</th><th>Riscos</th><th>Medida de controle</th><th>Medida de controle</th></tr>
-  <tr><td class=''>Item do documento / Tarefa</td><td class=''>Símbolo</td><td class=''>Perigos</td><td class=''>Riscos</td><td class=''>Controles de 
-Hierarquia</td><td class=''>Equipamento de proteção individual (EPI)</td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Postura inadequada ao realizar operações COI</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico
-- Cadeiras com regulagem</td><td class=''></td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Subir e descer escada repetidamente</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Abertura manual de Válvulas</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Ruído</td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Perda auditiva devido ao ruído do processo</td><td class=''>- Treinamentos de PCA
-- Exame Admissional e Periódico</td><td class=''>- Protetor auricular</td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class=''>Integridade estrutural</td><td class=''>Estrutura piso da fermentação</td><td class=''>- Inspeção visual das estruturas</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class='ferramenta'><i class='fa-solid fa-hammer icon'></i>Ferramentas Manuais</td><td class=''>Aperto dos parafusos com chave manual</td><td class=''>- Inspeção de ferramentas conforme FO.08.VE.005</td><td class=''>-  Luva de vaqueta mista ou elastano
-- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança
-- Protetor auricular</td></tr>
-  <tr><td class=''>a)    O operador de campo deve vestir o EPI apropriado: capacete com jugular, óculos de proteção, calçado de segurança, uniforme e protetor auricular.
-Verificar nível dos tanques de caldo pré evaporado e tanque de mel final estão acima de 20%
-Fechar válvula de esgotamento da dorna que irá alimentar.
-Solicitar ao operador de campo que verifique se o dreno da dorna que irá alimentar está fechado.
-Solicitar ao operador de campo que verifique se as válvulas de água de lavagem e assepsia estão fechadas.
-Com as válvulas fechadas, abrir válvula de entrada de fermento da dorna 1.
-Abrir válvula de fundo da cuba que será enviada para dorna 1.
- Ligar a bomba de fermento tratado para alimentação das dornas.
-Abrir válvula de entrada e saída de água no trocador de calor das dornas.
-Abrir as válvulas de entrada de caldo no trocador de calor de mosto, e a válvula de entrada do anel selecionado (1 ou 2) para a alimentação.
-Abrir as válvulas de entrada e saída de água do trocador de calor de mosto e solicitar ao operador da ETA que ligue as bombas das dornas e mosto.
-Solicitar ao operador de campo para verificar se a válvula do fundo da dorna está aberta.
- Abrir válvula de entrada e saída de vinho no trocador de calor.
- Abrir válvula de recirculação de vinho da dorna que será alimentada.
- Ligar bomba da dorna que será alimentada.
-Solicitar ao gestor da destilaria o nível de trabalho da dorna.</td><td class=''></td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Trabalho em Altura</td><td class=''>Queda de Pessoas</td><td class=''>- Treinamento de Trabalho em altura;
-- ASO apto para Trabalho em Altura</td><td class=''>- Cinto de Segurança;
-- Talabarte Duplo Y;
-- Capacete de segurança com julgar
-- Óculos de segurança
-- Calçado de segurança
-- Protetor Auricular</td></tr>
-  <tr><td class=''>q)  Abrir a válvula de alimentação da dorna, do anel selecionado.
- Ligar a bomba de mel e a bomba de caldo pré evaporado. 
- Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.
- Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.
- Abrir válvula de água na coluna de lavagem de CO2 de acordo com o Brix do mosto usado na alimentação.
- Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.
- Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5ºB, iniciar centrifugação.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Postura inadequada ao realizar operações COI</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico
-- Cadeiras com regulagem</td><td class=''></td></tr>
-  <tr><td class=''>q)  Abrir a válvula de alimentação da dorna, do anel selecionado.
- Ligar a bomba de mel e a bomba de caldo pré evaporado. 
- Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.
- Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.
- Abrir válvula de água na coluna de lavagem de CO2 de acordo com o Brix do mosto usado na alimentação.
- Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.
- Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5ºB, iniciar centrifugação.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Subir e descer escada repetidamente</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>q)  Abrir a válvula de alimentação da dorna, do anel selecionado.
- Ligar a bomba de mel e a bomba de caldo pré evaporado. 
- Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.
- Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.
- Abrir válvula de água na coluna de lavagem de CO2 de acordo com o Brix do mosto usado na alimentação.
- Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.
- Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5ºB, iniciar centrifugação.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Abertura manual de Válvulas</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>q)  Abrir a válvula de alimentação da dorna, do anel selecionado.
- Ligar a bomba de mel e a bomba de caldo pré evaporado. 
- Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.
- Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.
- Abrir válvula de água na coluna de lavagem de CO2 de acordo com o Brix do mosto usado na alimentação.
- Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.
- Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5ºB, iniciar centrifugação.</td><td class=''></td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Ruído</td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Perda auditiva devido ao ruído do processo</td><td class=''>- Treinamentos de PCA
-- Exame Admissional e Periódico</td><td class=''>- Protetor auricular</td></tr>
-  <tr><td class=''>q)  Abrir a válvula de alimentação da dorna, do anel selecionado.
- Ligar a bomba de mel e a bomba de caldo pré evaporado. 
- Continuar a alimentação da dorna até o nível estipulado pelo gestor da destilaria.
- Quando o nível alcançar a medição estipulada deve-se fechar a válvula de alimentação do mosto.
- Abrir válvula de água na coluna de lavagem de CO2 de acordo com o Brix do mosto usado na alimentação.
- Monitorar a queda do brix do vinho da dorna até que alcance < 2,5°B.
- Quando o brix atingir a condição de < 2,5°B ou ocorrer repetição de valores abaixo de 2,5ºB, iniciar centrifugação.</td><td class=''></td><td class='ferramenta'><i class='fa-solid fa-hammer icon'></i>Ferramentas Manuais</td><td class=''>Aperto dos parafusos com chave manual</td><td class=''>- Inspeção de ferramentas conforme FO.08.VE.005</td><td class=''>-  Luva de vaqueta mista ou elastano
-- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança
-- Protetor auricular</td></tr>
-  <tr><td class=''>a)  Avisar ao líder e operador de campo que irá realizar a parada da dorna após terminar centrifugação.
-Abrir a válvula de esgotamento da dorna.
-Ligar a bomba da dorna para o tanque de vinho a centrifugar.
-Após esvaziar a dorna, desligar a bomba da dorna para o tanque de vinho a centrifugar.
-Fechar a válvula de esgotamento da dorna.
-      Abrir a válvula de água de lavagem da dorna.
-Ligar a bomba de lavagem de dornas.
-Proceder a limpeza drenando para caixa de resíduo.
-      Após a finalização da lavagem, fechar a válvula de água de lavagem da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Postura inadequada ao realizar operações COI</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico
-- Cadeiras com regulagem</td><td class=''></td></tr>
-  <tr><td class=''>a)  Avisar ao líder e operador de campo que irá realizar a parada da dorna após terminar centrifugação.
-Abrir a válvula de esgotamento da dorna.
-Ligar a bomba da dorna para o tanque de vinho a centrifugar.
-Após esvaziar a dorna, desligar a bomba da dorna para o tanque de vinho a centrifugar.
-Fechar a válvula de esgotamento da dorna.
-      Abrir a válvula de água de lavagem da dorna.
-Ligar a bomba de lavagem de dornas.
-Proceder a limpeza drenando para caixa de resíduo.
-      Após a finalização da lavagem, fechar a válvula de água de lavagem da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Subir e descer escada repetidamente</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a)  Avisar ao líder e operador de campo que irá realizar a parada da dorna após terminar centrifugação.
-Abrir a válvula de esgotamento da dorna.
-Ligar a bomba da dorna para o tanque de vinho a centrifugar.
-Após esvaziar a dorna, desligar a bomba da dorna para o tanque de vinho a centrifugar.
-Fechar a válvula de esgotamento da dorna.
-      Abrir a válvula de água de lavagem da dorna.
-Ligar a bomba de lavagem de dornas.
-Proceder a limpeza drenando para caixa de resíduo.
-      Após a finalização da lavagem, fechar a válvula de água de lavagem da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Abertura manual de Válvulas</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a) Abrir drenos Válvula 6” e 2.1/2” do Trocador de Calor da Dorna. 
-Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.
-Bomba da caixa de resíduo liga pela chave boia. 
-Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático. 
-Fechar Válvula dreno 6” e 2.1/2” do Trocador de Calor da Dorna.
-Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</td><td class=''></td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Ruído</td><td class='ruido'><i class='fa-solid fa-ear-deaf icon'></i>Perda auditiva devido ao ruído do processo</td><td class=''>- Treinamentos de PCA
-- Exame Admissional e Periódico</td><td class=''>- Protetor auricular</td></tr>
-  <tr><td class=''>a) Abrir drenos Válvula 6” e 2.1/2” do Trocador de Calor da Dorna. 
-Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.
-Bomba da caixa de resíduo liga pela chave boia. 
-Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático. 
-Fechar Válvula dreno 6” e 2.1/2” do Trocador de Calor da Dorna.
-Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Postura inadequada ao realizar operações COI</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico
-- Cadeiras com regulagem</td><td class=''></td></tr>
-  <tr><td class=''>a) Abrir drenos Válvula 6” e 2.1/2” do Trocador de Calor da Dorna. 
-Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.
-Bomba da caixa de resíduo liga pela chave boia. 
-Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático. 
-Fechar Válvula dreno 6” e 2.1/2” do Trocador de Calor da Dorna.
-Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class='altura'><i class='fa-solid fa-person-falling icon'></i>Subir e descer escada repetidamente</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a) Abrir drenos Válvula 6” e 2.1/2” do Trocador de Calor da Dorna. 
-Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.
-Bomba da caixa de resíduo liga pela chave boia. 
-Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático. 
-Fechar Válvula dreno 6” e 2.1/2” do Trocador de Calor da Dorna.
-Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</td><td class=''></td><td class='ergonomia'><i class='fa-solid fa-chair icon'></i>Ergonomia</td><td class=''>Abertura manual de Válvulas</td><td class=''>- Treinamento transporte manual – NR-17
-- Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS
-- Laudo ergonômico</td><td class=''>- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança ante estático
-- Protetor auricular</td></tr>
-  <tr><td class=''>a) Abrir drenos Válvula 6” e 2.1/2” do Trocador de Calor da Dorna. 
-Abrir Válvula da caixa de resíduo para drenar a limpeza da dorna.
-Bomba da caixa de resíduo liga pela chave boia. 
-Após a finalização da lavagem, fechar a válvula de lavagem da dorna a mesma fecha automático. 
-Fechar Válvula dreno 6” e 2.1/2” do Trocador de Calor da Dorna.
-Fechar Válvula da caixa de resíduo após término da limpeza da dorna.</td><td class=''></td><td class='ferramenta'><i class='fa-solid fa-hammer icon'></i>Ferramentas Manuais</td><td class=''>Aperto dos parafusos com chave manual</td><td class=''>- Inspeção de ferramentas conforme FO.08.VE.005</td><td class=''>-  Luva de vaqueta mista ou elastano
-- Capacete de segurança com jugular
-- Óculos de segurança com vedação
-- Calçado de segurança
-- Protetor auricular</td></tr>
-</table>
 <footer>
-  <p>Data: 25/02/2023 – Revisão: 2</p>
+    <p>Data: 25/02/2023 – Revisão: 2</p>
 </footer>
 </body>
 </html>
