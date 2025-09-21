@@ -1,168 +1,595 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>IT.32.VE.019.3 (2)</title>
-  <style>
-    body { font-family: Arial, Helvetica, sans-serif; line-height:1.5; padding:20px; max-width:900px; margin:auto; }
-    h1 { font-size:20px; margin-bottom:8px; }
-    .meta { color:#555; font-size:12px; margin-bottom:12px; }
-    p { margin:6px 0; }
-  </style>
+    <meta charset="UTF-8">
+    <title>IT.32.VE.019 - Desmontagem e Limpeza das Centrífugas de Vinho</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f9fafc; color: #222; }
+        header { text-align: center; padding: 20px; margin-bottom: 30px; border-bottom: 4px solid #003366; background: #e6eef7; border-radius: 8px; }
+        h1 { color: #003366; margin: 0; }
+        h2 { color: #005599; margin-top: 30px; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        p { margin: 10px 0; }
+        ul { margin: 10px 0; padding-left: 20px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 30px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        th, td { border: 1px solid #ccc; padding: 10px; text-align: left; vertical-align: top; }
+        th { background-color: #003366; color: white; font-weight: bold; position: sticky; top: 0; z-index: 2; }
+
+        /* Cores por tipo de perigo (adaptado dos exemplos) */
+        td.quimico { background-color: #ffe5d9; }
+        td.ergonomia { background-color: #e2f0d9; }
+        td.ruido { background-color: #fff3cd; }
+        td.estrutural { background-color: #fde2e2; }
+        td.ferramenta { background-color: #e8f0fe; }
+        td.eletricidade { background-color: #fff3cd; } /* Exemplo de cor genérica para eletricidade */
+        td.partes-moveis { background-color: #e8f0fe; } /* Exemplo de cor genérica para partes móveis */
+        td.isolamento { background-color: #fde2e2; } /* Exemplo de cor genérica para isolamento */
+        td.içamento { background-color: #e2f0d9; } /* Exemplo de cor genérica para içamento */
+
+
+        tr:nth-child(even) { background-color: #f7f9fc; }
+        tr:hover { background-color: #f0f7ff; }
+
+        .icon { font-size: 1.1em; margin-right: 6px; }
+        footer { margin-top: 40px; text-align: center; font-size: 0.9em; color: #555; }
+        .procedure-list { list-style-type: lower-alpha; padding-left: 25px; }
+        .procedure-list li { margin-bottom: 8px; }
+
+        /* Estilos específicos da segunda instrução, se houver, para mesclar */
+        .subtitle { font-size: 1.1em; color: #555; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <h1>IT.32.VE.019.3 (2)</h1>
-  <div class="meta">Gerado: 2025-09-14T23:48:14.019141Z — arquivo original: IT.32.VE.019.3 (2).docx</div>
-  <p>OBJETIVO</p><br/>
-<p>Realizar a limpeza das centrífugas de vinho a cada parada do equipamento, garantindo que a concentração do levedo fique sempre acima de 60%.</p><br/>
-<p>ABRANGÊNCIA</p><br/>
-<p>Esta instrução de trabalho aplica-se a Destilaria da Unidade Industrial da Usina Vertente.</p><br/>
-<p>CONCEITOS</p><br/>
-<p>SIGLAS E ABREVIATURA</p><br/>
-<p>BPF – Boas Práticas de Fabricação</p><br/>
-<p>COI - Centro Operacional Integrado</p><br/>
-<p>EPI - Equipamentos de Proteção Individual</p><br/>
-<p>FO - Formulário</p><br/>
-<p>GAIA – Gerenciamento de Aspectos e Impactos Ambientais</p><br/>
-<p>IT – Instrução de Trabalho</p><br/>
-<p>MTE – Ministério do Trabalho e Emprego</p><br/>
-<p>NR - Normas Regulamentadoras</p><br/>
-<p>SSMAQ - Saúde, Segurança, Meio Ambiente e Qualidade</p><br/>
-<p>8S – Programa 8S</p><br/>
-<p>CCM – Centro de Controle de Motores</p><br/>
-<p>PCA – Programa de Conservação Auditiva</p><br/>
-<p>VE – Vertente</p><br/>
-<p>PB – Publicação</p><br/>
-<p>N/A – Não Aplicável</p><br/>
-<p>DDS – Diálogo Diário de Segurança</p><br/>
-<p>GA – GAIA</p><br/>
-<p>IND – Industria</p><br/>
-<p>DEFINIÇÕES</p><br/>
-<p>N/A.</p><br/>
-<p>DOCUMENTOS ASSOCIADOS</p><br/>
-<p>FO.08.VE.076 – Ficha de Controle de Lock &amp; Teg Out</p><br/>
-<p>FO.08.VE056 – Checklist Semana Talha Manual;</p><br/>
-<p>FO.11.VE.001 – Controle de acesso às áreas de risco</p><br/>
-<p>FO.32.VE.005 – Limpeza de Equipamento da Fermentação</p><br/>
-<p>FO.32.VE.010 – Acompanhamento de Boquilhas das Centrífugas</p><br/>
-<p>IT.13.VE.008 – Permissão de Trabalho PT</p><br/>
-<p>IT 13.VE.009 – Análise de Perigos e Riscos</p><br/>
-<p>IT.13.VE.015 – Controle de Energias Perigosas</p><br/>
-<p>IT.32.VE.015 – Partida e Parada das Centrífugas de Vinho</p><br/>
-<p>FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS</p><br/>
-<p>GA.02.010 – Planilha GAIA – Ind –  Processos Industriais</p><br/>
-<p>GA.02.004 – Planilha GAIA – Ind – Áreas Comuns</p><br/>
-<p>RESPONSABILIDADES</p><br/>
-<p>OPERADOR DA FERMENTAÇÃO – CAMPO</p><br/>
-<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer.</p><br/>
-<p>OPERADOR DA FERMENTAÇÃO – COI</p><br/>
-<p>Cumprir os requisitos deste procedimento, estar atento a operação de parada da centrífuga e preencher os formulários vinculados a essa instrução de trabalho.</p><br/>
-<p>CRITÉRIOS</p><br/>
-<p>As operações deverão ter início após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</p><br/>
-<p>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</p><br/>
-<p>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</p><br/>
-<p>Atendimento as normas de uso de EPI’s (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</p><br/>
-<p>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</p><br/>
-<p>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</p><br/>
-<p>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</p><br/>
-<p>PROCEDIMENTO</p><br/>
-<p>DESMONTAGEM E LIMPEZA DE CENTRÍFUGAS</p><br/>
-<p>a) Realizar semanalmente a inspeção da talha, utilizando o FO.08.VE056 – Checklist Semana Talha Manual;</p><br/>
-<p>b) Operador do COI deve informar o operador de campo que irá parar a centrífuga de vinho desejada, conforme campanha de limpeza;</p><br/>
-<p>c) Após confirmação do operador de campo, o operador do COI deve, a cada 2 minutos, reduzir a carga da centrífuga em 20% e abrir a válvula via supervisório de água em 20% até que a carga de vinho chegue a 0%, garantindo que quando a carga de vinho chegue a 0%, a água esteja com no mínimo 40% a 50% aberta;</p><br/>
-<p>d) Fechar manualmente em 100% a válvula de vinho da centrífuga;</p><br/>
-<p>e) Operador de campo deve confirmar à saída de água no duto da saída de fermento (Figura 1);</p><br/>
-<p>(Figura 1)</p><br/>
-<p>f) Operador de campo deve solicitar ao operador do COI para parar centrífuga de vinho.</p><br/>
-<p>g) Operador de COI deve comunicar ao operador do campo que a centrifuga foi parada e que o freio pode ser acionado;</p><br/>
-<p>h) Operador de campo deve acionar a alavanca de freio da centrífuga;</p><br/>
-<p>i) Operador do campo deve comunicar ao operador do COI que a centrifuga está parada;</p><br/>
-<p>j) Com a centrífuga parada, fechar em 100% a válvula de água da centrífuga via supervisório;</p><br/>
-<p>k) Acionar de forma que aperte a botoeira de bloquei da centrífuga;</p><br/>
-<p>l) Operador de campo deve solicitar ao eletricista o desarme/desenergização da centrifuga no CCM;</p><br/>
-<p>m) Eletricista deve realizar o desarme/desenergização, bloqueio e sinalização do painel da centrifuga, conforme IT.13.VE.015 – Controle de Energias Perigosas;</p><br/>
-<p>n) Operador de campo deve solicitar ao operador de COI o acionamento da centrifuga, garantindo que o eletricista tenha realizado o desarme/desenergização correta;</p><br/>
-<p>o) Realizar isolamento e sinalização do piso da centrifuga durante toda manutenção;</p><br/>
-<p>p) Retirar o mangote, tubo de saída vinho e peças de fixação de entrada de vinho utilizando a chave unha (Figura 2);</p><br/>
-<p>(Figura 2)</p><br/>
-<p>q) Soltar todos os parafusos de fixação da tampa utilizando a chave fixa 15/16”ou ¾;</p><br/>
-<p>r) Com a talha manual em condições de utilização, operador de campo deve posicionar a talha na marcação amarela de modo que fique centralizada com a centrífuga de vinho. (Figura 3);</p><br/>
-<p>(Figura 3)</p><br/>
-<p>s) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada da tampa da centrífuga (coletor superior);</p><br/>
-<p>t) Realizar a inspeção visual na tampa da centrifuga;</p><br/>
-<p>u) Apoiar a tampa da centrifuga no piso/chão;</p><br/>
-<p>v) Realizar a limpeza da parte externa da tampa com água tratada e esponja dupla face;</p><br/>
-<p>w) Realizar a Limpar da parte interna da tampa com a mangueira de água tratada;</p><br/>
-<p>y) Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa da centrífuga (coletor superior) para mesa suporte e retirar a cinta de ancoragem da tampa da centrifuga;</p><br/>
-<p>z) Retirar o anel de vedação da bomba distribuidora manualmente com chave de abertura e marreta de tecnew;</p><br/>
-<p>aa) Colocar a prensa prato no orifício distribuidor, de forma que o limite ao pressioná-lo seja a folga do anel de vedação com a tampa do rotor;</p><br/>
-<p>ab) Abrir o anel de vedação do rotor utilizando a chave de abertura e marreta de tecnew;</p><br/>
-<p>ac) Fixar a chave “chapéu chinês” para a retirada da tampa do rotor (parte superior do rotor) nos pontos conforme marcações da peça;</p><br/>
-<p>ad) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada da tampa do rotor (Figura 4);</p><br/>
-<p>(Figura 4)</p><br/>
-<p>ae) Apoiar a tampa do rotor no piso/chão;</p><br/>
-<p>af) Realizar a limpeza da parte interna dessa peça com a mangueira de água tratada;</p><br/>
-<p>ag) Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa do rotor para o suporte e retirar a cinta de ancoragem da tampa do rotor;</p><br/>
-<p>ah) Fixar a chave para a retirada dos pratos da centrifuga;</p><br/>
-<p>ai) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada dos pretos;</p><br/>
-<p>aj) Apoiar os pratos no piso/chão e retirar a cinta de ancoragem dos pratos;</p><br/>
-<p>ak) Realizar a desmontagem dos pratos manualmente;</p><br/>
-<p>al) Lavar os pratos, prato a prato, em ambos os lados e base com água tratada e esponja dupla face;</p><br/>
-<p>am) Colocar os pratos lavados no chão, sobre o lençol de borracha;</p><br/>
-<p>an) Retirar as doze boquilhas do rotor ferramenta manual e efetuar a limpeza com a agulha e ar comprimido;</p><br/>
-<p>ao) Verificar se as boquilhas estão danificadas através do calibrador de furos, se necessário retirar para substituir por novas com auxílio de ferramentas manuais.</p><br/>
-<p>ap) Lavar o rotor da centrífuga interna e externamente com água tratada e esponja dupla face;</p><br/>
-<p>aq) Quando necessário, realizar a limpeza com soda já pré diluída para retirar as incrustações, esfregar com esponja dupla face e enxaguar com água;</p><br/>
-<p>ar) Realizar inspeção nas buchas cônicas a fim de verificar se estão totalmente presas, se necessário retirar para substituir por novas com auxílio de ferramentas manuais.</p><br/>
-<p>MONTAGEM</p><br/>
-<p>a) Observar os pontos de marcação/cavidades (O) que há nas peças da centrífuga, garantindo que estão no fechamento correto da centrífuga.</p><br/>
-<p>b) Realizar a montagem dos pratos na base manualmente e colocar a ferramenta manual para içamento “lembrando que o primeiro prato tem suporte de espaçamento na parte inferior e superior, os demais somente na parte superior”;</p><br/>
-<p>c) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/colocação de todos dos pretos no rotor;</p><br/>
-<p>d) Alinhar manualmente os encaixes dos pratos aos encaixes do rotor;</p><br/>
-<p>e) Certificar-se de que os pratos estão elevados a uma altura de aproximadamente 4 cm da base da tampa do rotor, evidenciando a quantidade de pratos correta e retirar a cinta de ancoragem dos pratos;</p><br/>
-<p>Obs.: Não devem ser adicionados ou retirados pratos, sem autorização do líder, supervisor ou gestor.</p><br/>
-<p>f) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/colocação da tampa do rotor (parte superior) com o “chapéu chinês”, alinhando os encaixes da tampa aos encaixes do rotor, retirar a cinda de ancoragem da tampa do rotor;</p><br/>
-<p>g) Utilizar lubrificante para lubrificar (graxa grafitada e/ou vaselina) a rosca do anel de vedação do rotor.</p><br/>
-<p>h) Colocar a prensa prato no orifício distribuidor, de forma que, ao pressionar a tampa, facilite ao aperto do anel de vedação da tampa do rotor;</p><br/>
-<p>i) Apertar o anel com a chave adequada e se necessário utilizar a marreta de tecnew.</p><br/>
-<p>j) Colocar o anel de vedação da bomba distribuidora manualmente e abertar com chave e marreta de tecnew;</p><br/>
-<p>k) Recolocar as doze boquilhas no rotor utilizando a chave de boquilhas.</p><br/>
-<p>l) Certificar-se de que todas as boquilhas foram colocadas com arruelas.</p><br/>
-<p>m) Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa da centrifuga até que tampa e centrifuga estejam alinhadas corretamente;</p><br/>
-<p>n) Descer a tampa na centrifuga e colocar a tampa alinhada com a saída da tubulação de vinho e retirar a cinda de ancoragem da tampa;</p><br/>
-<p>o) Colocar o mangote, tubo de saída vinho e peças de fixação de entrada de vinho utilizando a chave unha (Figura 2);</p><br/>
-<p>p) Apertar todos os parafusos de fixação da tampa da centrifuga com a chave 15/16 e ¾;</p><br/>
-<p>q) Verificar nível do óleo da centrífuga;</p><br/>
-<p>r) Operador de campo deve solicitar ao eletricista o rearme/ligue a centrifuga no CCM;</p><br/>
-<p>s) Eletricista deve rearmar a centrifuga, retirar os bloqueio e sinalização do painel da centrifuga, entregando ao operador da Destilaria;</p><br/>
-<p>t) Operador de campo deve desacionar a alavanca de freio da centrífuga;</p><br/>
-<p>u) Acionar de forma que desaperte a botoeira da centrífuga para acioná-la;</p><br/>
-<p>v) Operador do campo deve comunicar o operador do COI que a centrifuga está limpa, montada e energizada para uso;</p><br/>
-<p>AÇÕES EM CASO DE ANOMALIA</p><br/>
-<p>a) Se as talhas apresentarem desgaste ou quebra, retirar o equipamento da operação e informar o superior imediato;</p><br/>
-<p>b) Identificar quais buchas cônicas estão soltas, e informar o superior imediato para correção;</p><br/>
-<p>c) Se as boquilhas apresentarem desgaste ou defeito, trocar por novas, mantendo sempre o jogo completo dentre às 12 boquilhas (exemplo: não colocar boquilhas 1.8mm junto com 1.6mm, para não atrapalhar o desbalanceamento da máquina);</p><br/>
-<p>d) Se o nível de pratos estiver muito baixo, estando a tampa muito rente ao rotor, informar superior imediato pois pode ser indício de falta de pratos;</p><br/>
-<p>e) Se nível de óleo não estiver na indicação correta, não partir a centrífuga e avisar o líder de turno para solicitar a manutenção industrial a adequação, caso o líder de turno não estiver presente, deve ser comunicado ao coordenador de turno.</p><br/>
-<p>TABELA DE PERIGOS E RISCOS</p><br/>
-<p>ASPECTOS SSMAQ</p><br/>
-<p>ASPECTOS DE MEIO AMBIENTE</p><br/>
-<p>As informações referentes aos Aspectos e Impactos Ambientais e seus controles operacionais estão disponíveis para consulta através da Planilha GAIA (Gerenciamento de Aspectos e Impactos Ambientais), e podem ser consultadas nos setores de forma eletrônica ou física.</p><br/>
-<p>ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</p><br/>
-<p>Durante a execução das atividades devem ser seguidos os requisitos do Programa 8S e as Boas Práticas de Fabricação.</p><br/>
-<p>REFERÊNCIAS NORMATIVAS</p><br/>
-<p>NR01 - Disposições Gerais</p><br/>
-<p>NR06 - Inspeção Prévia</p><br/>
-<p>NR08 - Edificações</p><br/>
-<p>NR09 - Programas de Prevenção de Riscos Ambientais</p><br/>
-<p>NR12 - Segurança no Trabalho em Máquinas e Equipamentos</p><br/>
-<p>NR15 - Atividades e Operações Insalubres.</p><br/>
-<p>NR17 - Ergonomia</p><br/>
-<p>NR18 - Condições e Meio Ambiente de Trabalho na Indústria da Construção</p><br/>
-<p>NR23 - Proteção Contra Incêndios</p><br/>
-<p>NR26 -</p><br/>
-<p>NR33 -</p><br/>
-<p>NR34 -</p>
+<header>
+    <h1>IT.32.VE.019 - Desmontagem e Limpeza das Centrífugas de Vinho</h1>
+    <p class="subtitle">Grupo: Fabricação de Etanol</p>
+    <p class="subtitle">Página 1 de 14</p>
+    <p class="subtitle">Elaborador: Líder e Supervisor Destilaria Aprovador: Gestor Produção Açúcar Etanol Validador: Engenheira Qualidade</p>
+</header>
+
+<h2>1. OBJETIVO</h2>
+<p>Realizar a limpeza das centrífugas de vinho a cada parada do equipamento, garantindo que a concentração do levedo fique sempre acima de 60%.</p>
+
+<h2>2. ABRANGÊNCIA</h2>
+<p>Esta instrução de trabalho aplica-se a Destilaria da Unidade Industrial da Usina Vertente.</p>
+
+<h2>3. CONCEITOS</h2>
+<p>N/A.</p>
+
+<h3>3.1. SIGLAS E ABREVIATURA</h3>
+<ul>
+    <li>BPF - Boas Práticas de Fabricação</li>
+    <li>COI - Centro Operacional Integrado</li>
+    <li>EPI - Equipamentos de Proteção Individual</li>
+    <li>FO - Formulário</li>
+    <li>GAIA – Gerenciamento de Aspectos e Impactos Ambientais</li>
+    <li>IT - Instrução de Trabalho</li>
+    <li>MTE – Ministério do Trabalho e Emprego</li>
+    <li>NR - Normas Regulamentadoras</li>
+    <li>SSMAQ - Saúde, Segurança, Meio Ambiente e Qualidade</li>
+    <li>8S - Programa 8S</li>
+    <li>CCM - Centro de Controle de Motores</li>
+    <li>PCA – Programa de Conservação Auditiva</li>
+    <li>VE - Vertente</li>
+    <li>PB – Publicação</li>
+    <li>N/A – Não Aplicável</li>
+    <li>DDS – Diálogo Diário de Segurança</li>
+    <li>GA - GAIA</li>
+    <li>IND – Industria</li>
+</ul>
+
+<h3>3.2. DEFINIÇÕES</h3>
+<p>N/A.</p>
+
+<h2>4. DOCUMENTOS ASSOCIADOS</h2>
+<ul>
+    <li>FO.08.VE.076 – Ficha de Controle de Lock & Teg Out</li>
+    <li>FO.08.VE056 – Checklist Semana Talha Manual;</li>
+    <li>FO.11.VE.001 – Controle de acesso às áreas de risco</li>
+    <li>FO.32.VE.005 – Limpeza de Equipamento da Fermentação</li>
+    <li>FO.32.VE.010 – Acompanhamento de Boquilhas das Centrífugas</li>
+    <li>IT.13.VE.008 – Permissão de Trabalho PT</li>
+    <li>IT 13.VE.009 – Análise de Perigos e Riscos</li>
+    <li>IT.13.VE.015 – Controle de Energias Perigosas</li>
+    <li>IT.32.VE.015 – Partida e Parada das Centrífugas de Vinho</li>
+    <li>FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS</li>
+</ul>
+
+<h2>5. RESPONSABILIDADES</h2>
+<h3>OPERADOR DA FERMENTAÇÃO – CAMPO</h3>
+<p>Cumprir os requisitos deste procedimento e, quando possível, sugerir melhorias para revisões desta instrução de trabalho, manter atualizado e informar ao gestor sobre qualquer anormalidade que ocorrer.</p>
+
+<h3>OPERADOR DA FERMENTAÇÃO – COI</h3>
+<p>Cumprir os requisitos deste procedimento, estar atento a operação de parada da centrífuga e preencher os formulários vinculados a essa instrução de trabalho.</p>
+
+<h2>6. CRITÉRIOS</h2>
+<ul>
+    <li>As operações deverão ter início após a verificação dos requisitos de higiene, normas de segurança e adequação dos equipamentos.</li>
+    <li>Os parâmetros operacionais devem ser monitorados/controlados de acordo com as respectivas faixas de trabalho.</li>
+    <li>Todas as correções que podem ser resolvidas a nível operacional são registradas nos próprios registros operacionais.</li>
+    <li>Atendimento as normas de uso de EPI's (capacetes, óculos, protetor auricular, uniforme e botas de segurança).</li>
+    <li>Utilização de insumos adquiridos de fornecedores qualificados e validados quanto as suas características físico-químicas.</li>
+    <li>Armazenagem e manuseio adequado dos insumos, de maneira a garantir a qualidade do produto.</li>
+    <li>Somente as variáveis de processo consideradas como de controle, são aplicáveis as ações corretivas, as quais estão explicitadas nos registros operacionais.</li>
+</ul>
+
+<h2>7. PROCEDIMENTO</h2>
+<h3>7.1. DESMONTAGEM E LIMPEZA DE CENTRÍFUGAS</h3>
+<ol class="procedure-list">
+    <li>Realizar semanalmente a inspeção da talha, utilizando o FO.08.VE056 – Checklist Semana Talha Manual;</li>
+    <li>Operador do COI deve informar o operador de campo que irá parar a centrífuga de vinho desejada, conforme campanha de limpeza,</li>
+    <li>Após confirmação do operador de campo, o operador do COI deve, a cada 2 minutos, reduzir a carga da centrífuga em 20% e abrir a válvula via supervisório de água em 20% até que a carga de vinho chegue a 0%, garantindo que quando a carga de vinho chegue a 0%, a água esteja com no mínimo 40% a 50% aberta;</li>
+    <li>Fechar manualmente em 100% a válvula de vinho da centrífuga;</li>
+    <li>Operador de campo deve confirmar à saída de água no duto da saída de fermento (Figura 1);</li>
+    <li>Operador de campo deve solicitar ao operador do COI para parar centrífuga de vinho.</li>
+    <li>Operador de COI deve comunicar ao operador do campo que a centrifuga foi parada e que o freio pode ser acionado;</li>
+    <li>Operador de campo deve acionar a alavanca de freio da centrífuga;</li>
+    <li>Operador do campo deve comunicar ao operador do COI que a centrifuga está parada;</li>
+    <li>Com a centrífuga parada, fechar em 100% a válvula de água da centrífuga via supervisório;</li>
+    <li>Acionar de forma que aperte a botoeira de bloquei da centrífuga;</li>
+    <li>Operador de campo deve solicitar ao eletricista o desarme/desenergização da centrifuga no CCM;</li>
+    <li>Eletricista deve realizar o desarme/desenergização, bloqueio e sinalização do painel da centrifuga, conforme IT.13.VE.015 – Controle de Energias Perigosas;</li>
+    <li>Operador de campo deve solicitar ao operador de COI o acionamento da centrifuga, garantindo que o eletricista tenha realizado o desarme/desenergização correta;</li>
+    <li>Realizar isolamento e sinalização do piso da centrifuga durante toda manutenção;</li>
+    <li>Retirar o mangote, tubo de saída vinho e peças de fixação de entrada de vinho utilizando a chave unha (Figura 2);</li>
+    <li>Soltar todos os parafusos de fixação da tampa utilizando a chave fixa 15/16"ou³»;</li>
+    <li>Com a talha manual em condições de utilização, operador de campo deve posicionar a talha na marcação amarela de modo que fique centralizada com a centrífuga de vinho. (Figura 3);</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada da tampa da centrifuga (coletor superior);</li>
+    <li>Realizar a inspeção visual na tampa da centrifuga;</li>
+    <li>Apoiar a tampa da centrifuga no piso/chão;</li>
+    <li>Realizar a limpeza da parte externa da tampa com água tratada e esponja dupla face;</li>
+    <li>Realizar a Limpar da parte interna da tampa com a mangueira de água tratada;</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa da centrífuga (coletor superior) para mesa suporte e retirar a cinta de ancoragem da tampa da centrifuga,</li>
+    <li>Retirar o anel de vedação da bomba distribuidora manualmente com chave de abertura e marreta de tecnew;</li>
+    <li>Colocar a prensa prato no orificio distribuidor, de forma que o limite ao pressioná-lo seja a folga do anel de vedação com a tampa do rotor;</li>
+    <li>Abrir o anel de vedação do rotor utilizando a chave de abertura e marreta de tecnew;</li>
+    <li>Fixar a chave “chapéu chinês” para a retirada da tampa do rotor (parte superior do rotor) nos pontos conforme marcações da peça;</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada da tampa do rotor (Figura 4);</li>
+    <li>Apoiar a tampa do rotor no piso/chão;</li>
+    <li>Realizar a limpeza da parte interna dessa peça com a mangueira de água tratada;</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa do rotor para o suporte e retirar a cinta de ancoragem da tampa do rotor;</li>
+    <li>Fixar a chave para a retirada dos pratos da centrifuga;</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada dos pretos;</li>
+    <li>Apoiar os pratos no piso/chão e retirar a cinta de ancoragem dos pratos;</li>
+    <li>Realizar a desmontagem dos pratos manualmente;</li>
+    <li>Lavar os pratos, prato a prato, em ambos os lados e base com água tratada e esponja dupla face;</li>
+    <li>Colocar os pratos lavados no chão, sobre o lençol de borracha;</li>
+    <li>Retirar as doze boquilhas do rotor ferramenta manual e efetuar a limpeza com a agulha e ar comprimido;</li>
+    <li>Verificar se as boquilhas estão danificadas através do calibrador de furos, se necessário retirar para substituir por novas com auxílio de ferramentas manuais.</li>
+</ol>
+
+<h3>7.2. MONTAGEM</h3>
+<ol class="procedure-list">
+    <li>Observar os pontos de marcação/cavidades (O) que há nas peças da centrífuga, garantindo que estão no fechamento correto da centrífuga.</li>
+    <li>Realizar a montagem dos pratos na base manualmente e colocar a ferramenta manual para içamento “lembrando que o primeiro prato tem suporte de espaçamento na parte inferior e superior, os demais somente na parte superior”;</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação/colocação de todos dos pretos no rotor;</li>
+    <li>Alinhar manualmente os encaixes dos pratos aos encaixes do rotor;</li>
+    <li>Certificar-se de que os pratos estão elevados a uma altura de aproximadamente 4 cm da base da tampa do rotor, evidenciando a quantidade de pratos correta e retirar a cinta de ancoragem dos pratos;
+        Obs.: Não devem ser adicionados ou retirados pratos, sem autorização do líder, supervisor ou gestor.</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação/colocação da tampa do rotor (parte superior) com o “chapéu chinês”, alinhando os encaixes da tampa aos encaixes do rotor, retirar a cinda de ancoragem da tampa do rotor;</li>
+    <li>Utilizar lubrificante para lubrificar (graxa grafitada e/ou vaselina) a rosca do anel de vedação do rotor.</li>
+    <li>Colocar a prensa prato no orificio distribuidor, de forma que, ao pressionar a tampa, facilite ao aperto do anel de vedação da tampa do rotor;</li>
+    <li>Apertar o anel com a chave adequada e se necessário utilizar a marreta de tecnew.</li>
+    <li>Colocar o anel de vedação da bomba distribuidora manualmente e abertar com chave e marreta de tecnew;</li>
+    <li>Recolocar as doze boquilhas no rotor utilizando a chave de boquilhas.</li>
+    <li>Certificar-se de que todas as boquilhas foram colocadas com arruelas.</li>
+    <li>Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa da centrifuga até que tampa e centrifuga estejam alinhadas corretamente;</li>
+    <li>Descer a tampa na centrifuga e colocar a tampa alinhada com a saída da tubulação de vinho e retirar a cinda de ancoragem da tampa;</li>
+    <li>Colocar o mangote, tubo de saída vinho e peças de fixação de entrada de vinho utilizando a chave unha (Figura 2);</li>
+    <li>Apertar todos os parafusos de fixação da tampa da centrifuga com a chave 15/16 e ³»;</li>
+    <li>Verificar nível do óleo da centrífuga;</li>
+    <li>Operador de campo deve solicitar ao eletricista o rearme/ligue a centrifuga no CCM;</li>
+    <li>Eletricista deve rearmar a centrifuga, retirar os bloqueio e sinalização do painel da centrifuga, entregando ao operador da Destilaria;</li>
+    <li>Operador de campo deve desacionar a alavanca de freio da centrífuga;</li>
+    <li>Acionar de forma que desaperte a botoeira da centrífuga para acioná-la;</li>
+    <li>Operador do campo deve comunicar o operador do COI que a centrifuga está limpa, montada e energizada para uso;</li>
+</ol>
+
+<h3>7.3. AÇÕES EM CASO DE ANOMALIA</h3>
+<ul>
+    <li>Se as talhas apresentarem desgaste ou quebra, retirar o equipamento da operação e informar o superior imediato;</li>
+    <li>Identificar quais buchas cônicas estão soltas, e informar o superior imediato para correção;</li>
+    <li>Se as boquilhas apresentarem desgaste ou defeito, trocar por novas, mantendo sempre o jogo completo dentre às 12 boquilhas (exemplo: não colocar boquilhas 1.8mm junto com 1.6mm, para não atrapalhar o desbalanceamento da máquina);</li>
+    <li>Se o nível de pratos estiver muito baixo, estando a tampa muito rente ao rotor, informar superior imediato pois pode ser indício de falta de pratos;</li>
+    <li>Se nível de óleo não estiver na indicação correta, não partir a centrífuga e avisar o líder de turno para solicitar a manutenção industrial a adequação, caso o líder de turno não estiver presente, deve ser comunicado ao coordenador de turno.</li>
+</ul>
+
+<h2>7.4. TABELA DE PERIGOS E RISCOS</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Item do documento / Tarefa</th>
+            <th>Símbolo</th>
+            <th>Perigos</th>
+            <th>Riscos</th>
+            <th>Controles de engenharia</th>
+            <th>Medida de controle<br>Equipamento de proteção individual (EPI)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>a) Realizar semanalmente a inspeção da talha, utilizando o FO.08. VE056 – Checklist Semana Talha Manual;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI<br>Subir e descer escada repetidamente</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Cadeiras com regulagem<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>b) Operador do COI deve informar o operador de campo que irá parar a centrífuga de vinho desejada, conforme campanha de limpeza;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>c) Após confirmação do operador de campo, o operador do COI deve, a cada 2 minutos, reduzir a carga da centrífuga em 20% e abrir a válvula via supervisório de água em 20% até que a carga de vinho chegue a 0%, garantindo que quando a carga de vinho chegue a 0%, a água esteja com no mínimo 40% a 50% aberta;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI<br>Subir e descer escada repetidamente</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Cadeiras com regulagem<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>d) Fechar manualmente em 100% a válvula de vinho da centrífuga;</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo</td>
+            <td>Treinamentos de PCA<br>Exame Admissional e Periódico</td>
+            <td>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>e) Operador de campo deve confirmar à saída de água no duto da saída de fermento (Figura 1);</td>
+            <td><i class="fa-solid fa-building icon"></i></td>
+            <td class="estrutural">Integridade estrutural</td>
+            <td>Estrutura piso das centrifugas</td>
+            <td>Inspeção visual das estruturas</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>f) Operador de campo deve solicitar ao operador do COI para parar centrífuga de vinho.</td>
+            <td><i class="fa-solid fa-flask-vial icon"></i></td>
+            <td class="quimico">Produto Químico</td>
+            <td>Resultado do equipamento</td>
+            <td>FISPQ do produto químico; Sinalização do produto químico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular<br>Creme de proteção;<br>Par de luva de latex</td>
+        </tr>
+        <tr>
+            <td>g) Operador de COI deve comunicar ao operador do campo que a centrifuga foi parada e que o freio pode ser acionado;</td>
+            <td><i class="fa-solid fa-plug icon"></i></td>
+            <td class="eletricidade">Eletricidade</td>
+            <td>Contato com painel energizado</td>
+            <td>Treinamento NR-10 Básico<br>Treinamento NR-10 SEP<br>Barramento elétrico<br>Projetos elétricos dos painéis<br>Sinalização dos comandos dos painéis<br>Sinalização dos riscos dos painéis<br>Controle de acesso dos CCM FO.11.VE.001 – Controle de acesso às áreas de risco<br>Ferramentas de teste e manutenção isolantes e testadas conforme NR-10</td>
+            <td>Vestimenta "calça e camisa" NR-10<br>Luva para eletricista<br>Calçado para eletricista<br>Balaclava antichama<br>Óculos de segurança<br>Protetor facial<br>Capacete de segurança com jugular</td>
+        </tr>
+        <tr>
+            <td>h) Operador de campo deve acionar a alavanca de freio da centrífuga;</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Exposição do ruído gerados por máquinas e equipamentos</td>
+            <td>Treinamentos de PCA<br>Exame Admissional e Periódico</td>
+            <td>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>i) Operador do campo deve comunicar ao operador do COI que a centrifuga está parada;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>j) Com a centrífuga parada, fechar em 100% a válvula de água da centrífuga via supervisório;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>k) Acionar de forma que aperte a botoeira de bloquei da centrífuga;</td>
+            <td><i class="fa-solid fa-wrench icon"></i></td>
+            <td class="ferramenta">Ferramentas Manuais</td>
+            <td>Manuseio de ferramentas manuais para desmontagem da centrifuga</td>
+            <td>Revezamento durante a atividade<br>Ginastica laboral</td>
+            <td>Luva de vaqueta mista ou elastano<br>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>l) Operador de campo deve solicitar ao eletricista o desarme/desenergização da centrifuga no CCM;</td>
+            <td><i class="fa-solid fa-link icon"></i></td>
+            <td class="partes-moveis">Partes Moveis</td>
+            <td>Contato com centrifuga de vinho</td>
+            <td>IT.13.VE.015 – Controle de Energias Perigosas<br>FO.08.VE.076- Ficha de Controle de Lock & Tag Out<br>Treinamento de bloqueio na IT.13.VE.015 e FO.08.VE.076<br>Dispositivos de bloqueio e sinalização;<br>Chave geral com plug para bloqueio da esteira</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>m) Eletricista deve realizar o desarme/desenergização, bloqueio e sinalização do painel da centrifuga, conforme IT.13.VE.015 – Controle de Energias Perigosas;</td>
+            <td><i class="fa-solid fa-arrow-up icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Operador capacitado na IT.13.VE.011 - Equipamento de Elevação e Transporte<br>FO.08.VE056 - Checklist Semana Talha Manual;<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>n) Operador de campo deve solicitar ao operador de COI o acionamento da centrifuga, garantindo que o eletricista tenha realizado o desarme/desenergização correta;</td>
+            <td><i class="fa-solid fa-download icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Talha e estrutura de suporte resistente ao peso das peças<br>Cinta de ancoragem<br>capacidade de içamento maior que as peças<br>Operador capacitado na IT.13.VE.011 – Equipamento de Elevação e Transporte<br>FO.08.VE.056<br>Checklist Semana Talha Manual:<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>o) Realizar isolamento e sinalização do piso da centrifuga durante toda manutenção;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>p) Retirar o mangote, tubo de saída vinho e peças de fixação de entrada de vinho utilizando a chave unha (Figura 2);</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>q) Soltar todos os parafusos de fixação da tampa utilizando a chave fixa 15/16"ou³»;</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo</td>
+            <td>Treinamentos de PCA<br>Exame Admissional e Periódico</td>
+            <td>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>r) Com a talha manual em condições de utilização, operador de campo deve posicionar a talha na marcação amarela de modo que fique centralizada com a centrífuga de vinho. (Figura 3);</td>
+            <td><i class="fa-solid fa-building icon"></i></td>
+            <td class="estrutural">Integridade estrutural</td>
+            <td>Estrutura piso das centrifugas</td>
+            <td>Inspeção visual das estruturas</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>s) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada da tampa da centrifuga (coletor superior);</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>t) Realizar a inspeção visual na tampa da centrifuga;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>u) Apoiar a tampa da centrifuga no piso/chão;</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo</td>
+            <td>Treinamentos de PCA<br>Exame Admissional e Periódico</td>
+            <td>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>v) Realizar a limpeza da parte externa da tampa com água tratada e esponja dupla face;</td>
+            <td><i class="fa-solid fa-building icon"></i></td>
+            <td class="estrutural">Integridade estrutural</td>
+            <td>Estrutura piso das centrifugas</td>
+            <td>Inspeção visual das estruturas</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>w) Realizar a Limpar da parte interna da tampa com a mangueira de água tratada;</td>
+            <td><i class="fa-solid fa-wrench icon"></i></td>
+            <td class="ferramenta">Ferramentas Manuais</td>
+            <td>Manuseio de ferramentas manuais para montagem da centrifuga</td>
+            <td>Revezamento durante a atividade<br>Ginastica laboral</td>
+            <td>Luva de vaqueta mista ou elastano<br>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>y) Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa da centrifuga (coletor superior) para mesa suporte e retirar a cinta de ancoragem da tampa da centrifuga,</td>
+            <td><i class="fa-solid fa-link icon"></i></td>
+            <td class="partes-moveis">Partes Moveis</td>
+            <td>Contato com centrifuga de vinho</td>
+            <td>IT.13.VE.015 – Controle de Energias Perigosas<br>FO.08.VE.076- Ficha de Controle de Lock & Tag Out<br>Treinamento de bloqueio na IT.13.VE.015 e FO.08.VE.076<br>Dispositivos de bloqueio e sinalização;<br>Chave geral com plug para bloqueio da esteira</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>z) Retirar o anel de vedação da bomba distribuidora manualmente com chave de abertura e marreta de tecnew;</td>
+            <td><i class="fa-solid fa-arrow-up icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Operador capacitado na IT.13.VE.011 - Equipamento de Elevação e Transporte<br>FO.08.VE056 - Checklist Semana Talha Manual;<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>aa) Colocar a prensa prato no orificio distribuidor, de forma que o limite ao pressioná-lo seja a folga do anel de vedação com a tampa do rotor;</td>
+            <td><i class="fa-solid fa-download icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Talha e estrutura de suporte resistente ao peso das peças<br>Cinta de ancoragem<br>capacidade de içamento maior que as peças<br>Operador capacitado na IT.13.VE.011 – Equipamento de Elevação e Transporte<br>FO.08.VE.056<br>Checklist Semana Talha Manual:<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ab) Abrir o anel de vedação do rotor utilizando a chave de abertura e marreta de tecnew;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ac) Fixar a chave “chapéu chinês” para a retirada da tampa do rotor (parte superior do rotor) nos pontos conforme marcações da peça;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ad) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada da tampa do rotor (Figura 4);</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo</td>
+            <td>Treinamentos de PCA<br>Exame Admissional e Periódico</td>
+            <td>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ae) Apoiar a tampa do rotor no piso/chão;</td>
+            <td><i class="fa-solid fa-building icon"></i></td>
+            <td class="estrutural">Integridade estrutural</td>
+            <td>Estrutura piso das centrifugas</td>
+            <td>Inspeção visual das estruturas</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>af) Realizar a limpeza da parte interna dessa peça com a mangueira de água tratada;</td>
+            <td><i class="fa-solid fa-wrench icon"></i></td>
+            <td class="ferramenta">Ferramentas Manuais</td>
+            <td>Manuseio de ferramentas manuais para montagem da centrifuga</td>
+            <td>Revezamento durante a atividade<br>Ginastica laboral</td>
+            <td>Luva de vaqueta mista ou elastano<br>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ag) Com auxílio da talha e cinta de ancoragem, realizar a movimentação da tampa do rotor para o suporte e retirar a cinta de ancoragem da tampa do rotor;</td>
+            <td><i class="fa-solid fa-link icon"></i></td>
+            <td class="partes-moveis">Partes Moveis</td>
+            <td>Contato com centrifuga de vinho</td>
+            <td>IT.13.VE.015 – Controle de Energias Perigosas<br>FO.08.VE.076- Ficha de Controle de Lock & Tag Out<br>Treinamento de bloqueio na IT.13.VE.015 e FO.08.VE.076<br>Dispositivos de bloqueio e sinalização;<br>Chave geral com plug para bloqueio da esteira</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ah) Fixar a chave para a retirada dos pratos da centrifuga;</td>
+            <td><i class="fa-solid fa-arrow-up icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Operador capacitado na IT.13.VE.011 - Equipamento de Elevação e Transporte<br>FO.08.VE056 - Checklist Semana Talha Manual;<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ai) Com auxílio da talha e cinta de ancoragem, realizar a movimentação/retirada dos pretos;</td>
+            <td><i class="fa-solid fa-download icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Talha e estrutura de suporte resistente ao peso das peças<br>Cinta de ancoragem<br>capacidade de içamento maior que as peças<br>Operador capacitado na IT.13.VE.011 – Equipamento de Elevação e Transporte<br>FO.08.VE.056<br>Checklist Semana Talha Manual:<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>aj) Apoiar os pratos no piso/chão e retirar a cinta de ancoragem dos pratos;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ak) Realizar a desmontagem dos pratos manualmente;</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>al) Lavar os pratos, prato a prato, em ambos os lados e base com água tratada e esponja dupla face;</td>
+            <td><i class="fa-solid fa-volume-up icon"></i></td>
+            <td class="ruido">Ruído</td>
+            <td>Perda auditiva devido ao ruído do processo</td>
+            <td>Treinamentos de PCA<br>Exame Admissional e Periódico</td>
+            <td>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>am) Colocar os pratos lavados no chão, sobre o lençol de borracha;</td>
+            <td><i class="fa-solid fa-building icon"></i></td>
+            <td class="estrutural">Integridade estrutural</td>
+            <td>Estrutura piso das centrifugas</td>
+            <td>Inspeção visual das estruturas</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>an) Retirar as doze boquilhas do rotor ferramenta manual e efetuar a limpeza com a agulha e ar comprimido;</td>
+            <td><i class="fa-solid fa-wrench icon"></i></td>
+            <td class="ferramenta">Ferramentas Manuais</td>
+            <td>Manuseio de ferramentas manuais para montagem da centrifuga</td>
+            <td>Revezamento durante a atividade<br>Ginastica laboral</td>
+            <td>Luva de vaqueta mista ou elastano<br>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ao) Verificar se as boquilhas estão danificadas através do calibrador de furos, se necessário retirar para substituir por novas com auxílio de ferramentas manuais.</td>
+            <td><i class="fa-solid fa-link icon"></i></td>
+            <td class="partes-moveis">Partes Moveis</td>
+            <td>Contato com centrifuga de vinho</td>
+            <td>IT.13.VE.015 – Controle de Energias Perigosas<br>FO.08.VE.076- Ficha de Controle de Lock & Tag Out<br>Treinamento de bloqueio na IT.13.VE.015 e FO.08.VE.076<br>Dispositivos de bloqueio e sinalização;<br>Chave geral com plug para bloqueio da esteira</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ap) Lavar o rotor da centrífuga interna e externamente com água tratada e esponja dupla face;</td>
+            <td><i class="fa-solid fa-arrow-up icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Operador capacitado na IT.13.VE.011 - Equipamento de Elevação e Transporte<br>FO.08.VE056 - Checklist Semana Talha Manual;<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>aq) Quando necessário, realizar a limpeza com soda já pré diluída para retirar as incrustações, esfregar com esponja dupla face e enxaguar com água;</td>
+            <td><i class="fa-solid fa-download icon"></i></td>
+            <td class="içamento">Içamento de carga</td>
+            <td>Movimentar das peças/partes da centrifuga</td>
+            <td>Talha e estrutura de suporte resistente ao peso das peças<br>Cinta de ancoragem<br>capacidade de içamento maior que as peças<br>Operador capacitado na IT.13.VE.011 – Equipamento de Elevação e Transporte<br>FO.08.VE.056<br>Checklist Semana Talha Manual:<br>Isolamento e sinalização da área de movimentação</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+        <tr>
+            <td>ar) Realizar inspeção nas buchas cônicas a fim de verificar se estão totalmente presas, se necessário retirar para substituir por novas com auxílio de ferramentas manuais.</td>
+            <td><i class="fa-solid fa-person icon"></i></td>
+            <td class="ergonomia">Ergonomia</td>
+            <td>Postura inadequada ao realizar operações COI</td>
+            <td>Treinamento transporte manual NR-17<br>Ginastica laboral FO.18.VE.025 – Ficha de Comprovação de Ginástica Laboral e DDS<br>Laudo ergonômico</td>
+            <td>Capacete de segurança com jugular<br>Óculos de segurança<br>Calçado de segurança<br>Protetor auricular</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>7.3. AÇÕES EM CASO DE ANOMALIA</h3>
+<ul>
+    <li>Se as talhas apresentarem desgaste ou quebra, retirar o equipamento da operação e informar o superior imediato;</li>
+    <li>Identificar quais buchas cônicas estão soltas, e informar o superior imediato para correção;</li>
+    <li>Se as boquilhas apresentarem desgaste ou defeito, trocar por novas, mantendo sempre o jogo completo dentre às 12 boquilhas (exemplo: não colocar boquilhas 1.8mm junto com 1.6mm, para não atrapalhar o desbalanceamento da máquina);</li>
+    <li>Se o nível de pratos estiver muito baixo, estando a tampa muito rente ao rotor, informar superior imediato pois pode ser indício de falta de pratos;</li>
+    <li>Se nível de óleo não estiver na indicação correta, não partir a centrífuga e avisar o líder de turno para solicitar a manutenção industrial a adequação, caso o líder de turno não estiver presente, deve ser comunicado ao coordenador de turno.</li>
+</ul>
+
+<h2>8. ASPECTOS SSMAQ</h2>
+<h3>8.1. ASPECTOS DE MEIO AMBIENTE</h3>
+<p>As informações referentes aos Aspectos e Impactos Ambientais e seus controles operacionais estão disponíveis para consulta através da Planilha GAIA (Gerenciamento de Aspectos e Impactos Ambientais), e podem ser consultadas nos setores de forma eletrônica ou física.</p>
+
+<h3>8.2. ASPECTOS DE QUALIDADE E SEGURANÇA DO ALIMENTO</h3>
+<p>Durante a execução das atividades devem ser seguidos os requisitos do Programa 8S e as Boas Práticas de Fabricação.</p>
+
+<h2>9. REFERÊNCIAS NORMATIVAS</h2>
+<ul>
+    <li>NR01 - Disposições Gerais</li>
+    <li>NR06 - Inspeção Prévia</li>
+    <li>NR08 - Edificações</li>
+    <li>NR09 - Programas de Prevenção de Riscos Ambientais</li>
+    <li>NR12 - Segurança no Trabalho em Máquinas e Equipamentos</li>
+    <li>NR15 - Atividades e Operações Insalubres.</li>
+    <li>NR17 - Ergonomia</li>
+    <li>NR18 - Condições e Meio Ambiente de Trabalho na Indústria da Construção</li>
+    <li>NR23 - Proteção Contra Incêndios</li>
+    <li>NR26 - Sinalização de segurança</li>
+    <li>NR33 - Segurança e saúde no trabalho em espaços confinados</li>
+    <li>NR34 - Condições e meio ambiente de trabalho na indústria da construção, reparação e desmonte naval</li>
+</ul>
+
+<footer>
+    <p>Data: 26/02/2023 – Revisão: 3</p>
+</footer>
+
 </body>
 </html>
